@@ -18,7 +18,9 @@
 		2485675A18DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
 		2485675B18DB5CD3006FFE27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674318DB5CD3006FFE27 /* UIKit.framework */; };
 		2485676318DB5CD3006FFE27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2485676118DB5CD3006FFE27 /* InfoPlist.strings */; };
-		2485676518DB5CD3006FFE27 /* CrossfitReviverNotifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485676418DB5CD3006FFE27 /* CrossfitReviverNotifierTests.m */; };
+		2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677118DB646D006FFE27 /* CFRReviverWod.m */; };
+		2485677418DB6787006FFE27 /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677318DB6787006FFE27 /* SampleSpec.m */; };
+		D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,12 @@
 		2485675818DB5CD3006FFE27 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2485676018DB5CD3006FFE27 /* CrossfitReviverNotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrossfitReviverNotifierTests-Info.plist"; sourceTree = "<group>"; };
 		2485676218DB5CD3006FFE27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2485676418DB5CD3006FFE27 /* CrossfitReviverNotifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrossfitReviverNotifierTests.m; sourceTree = "<group>"; };
+		2485676E18DB635C006FFE27 /* CFRWod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFRWod.h; sourceTree = "<group>"; };
+		2485677018DB646D006FFE27 /* CFRReviverWod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFRReviverWod.h; path = Models/CFRReviverWod.h; sourceTree = "<group>"; };
+		2485677118DB646D006FFE27 /* CFRReviverWod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFRReviverWod.m; path = Models/CFRReviverWod.m; sourceTree = "<group>"; };
+		2485677318DB6787006FFE27 /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleSpec.m; path = ../SampleSpec.m; sourceTree = "<group>"; };
+		2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossfitReviverNotifierTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossfitReviverNotifierTests.xcconfig"; path = "Pods/Pods-CrossfitReviverNotifierTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,7 @@
 				2485675918DB5CD3006FFE27 /* XCTest.framework in Frameworks */,
 				2485675B18DB5CD3006FFE27 /* UIKit.framework in Frameworks */,
 				2485675A18DB5CD3006FFE27 /* Foundation.framework in Frameworks */,
+				D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				2485675E18DB5CD3006FFE27 /* CrossfitReviverNotifierTests */,
 				2485673E18DB5CD3006FFE27 /* Frameworks */,
 				2485673D18DB5CD3006FFE27 /* Products */,
+				3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +109,7 @@
 				2485674118DB5CD3006FFE27 /* CoreGraphics.framework */,
 				2485674318DB5CD3006FFE27 /* UIKit.framework */,
 				2485675818DB5CD3006FFE27 /* XCTest.framework */,
+				2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,9 +117,7 @@
 		2485674518DB5CD3006FFE27 /* CrossfitReviverNotifier */ = {
 			isa = PBXGroup;
 			children = (
-				2485674E18DB5CD3006FFE27 /* CFRAppDelegate.h */,
-				2485674F18DB5CD3006FFE27 /* CFRAppDelegate.m */,
-				2485675118DB5CD3006FFE27 /* Images.xcassets */,
+				2485676F18DB636C006FFE27 /* Models */,
 				2485674618DB5CD3006FFE27 /* Supporting Files */,
 			);
 			path = CrossfitReviverNotifier;
@@ -118,6 +126,9 @@
 		2485674618DB5CD3006FFE27 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2485674E18DB5CD3006FFE27 /* CFRAppDelegate.h */,
+				2485674F18DB5CD3006FFE27 /* CFRAppDelegate.m */,
+				2485675118DB5CD3006FFE27 /* Images.xcassets */,
 				2485674718DB5CD3006FFE27 /* CrossfitReviverNotifier-Info.plist */,
 				2485674818DB5CD3006FFE27 /* InfoPlist.strings */,
 				2485674B18DB5CD3006FFE27 /* main.m */,
@@ -129,7 +140,7 @@
 		2485675E18DB5CD3006FFE27 /* CrossfitReviverNotifierTests */ = {
 			isa = PBXGroup;
 			children = (
-				2485676418DB5CD3006FFE27 /* CrossfitReviverNotifierTests.m */,
+				2485677318DB6787006FFE27 /* SampleSpec.m */,
 				2485675F18DB5CD3006FFE27 /* Supporting Files */,
 			);
 			path = CrossfitReviverNotifierTests;
@@ -142,6 +153,16 @@
 				2485676118DB5CD3006FFE27 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2485676F18DB636C006FFE27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2485676E18DB635C006FFE27 /* CFRWod.h */,
+				2485677018DB646D006FFE27 /* CFRReviverWod.h */,
+				2485677118DB646D006FFE27 /* CFRReviverWod.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2485676B18DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifierTests" */;
 			buildPhases = (
+				6A9B7FDE50B046B68932021E /* Check Pods Manifest.lock */,
 				2485675318DB5CD3006FFE27 /* Sources */,
 				2485675418DB5CD3006FFE27 /* Frameworks */,
 				2485675518DB5CD3006FFE27 /* Resources */,
+				662BCFF106294C1DB1D1F0C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,11 +258,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		662BCFF106294C1DB1D1F0C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CrossfitReviverNotifierTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A9B7FDE50B046B68932021E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2485673818DB5CD3006FFE27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */,
 				2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */,
 				2485674C18DB5CD3006FFE27 /* main.m in Sources */,
 			);
@@ -249,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2485676518DB5CD3006FFE27 /* CrossfitReviverNotifierTests.m in Sources */,
+				2485677418DB6787006FFE27 /* SampleSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +438,7 @@
 		};
 		2485676C18DB5CD3006FFE27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -403,6 +461,7 @@
 		};
 		2485676D18DB5CD3006FFE27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -438,6 +497,7 @@
 				2485676A18DB5CD3006FFE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2485676B18DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifierTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +506,7 @@
 				2485676D18DB5CD3006FFE27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

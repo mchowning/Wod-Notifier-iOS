@@ -1,3 +1,4 @@
-target :"Crossfit Reviver NotifierTests", :exclusive => true do
+target :"CrossfitReviverNotifierTests", :exclusive => true do
   pod 'Kiwi/XCTest'
+  pod 'AFNetworking'
 end
