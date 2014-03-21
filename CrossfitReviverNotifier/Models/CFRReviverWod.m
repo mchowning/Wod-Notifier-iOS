@@ -8,6 +8,12 @@
 
 #import "CFRReviverWod.h"
 
+@interface CFRReviverWod()
+
+@property (nonatomic, strong) NSDate *date;
+
+@end
+
 @implementation CFRReviverWod
 
 - (NSAttributedString *)getAttributedStringDescription {
@@ -26,6 +32,34 @@
     newWod.link = [self.link copyWithZone:zone];
     newWod.htmlDescription = [self.htmlDescription copyWithZone:zone];
     return newWod;
+}
+
+- (void)assignDate:(NSString *)dateString {
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"MM/dd/yy"];
+    NSDate *aDate = [df dateFromString:dateString];
+    self.date = aDate;
+}
+
+#pragma mark - Setter and Getter methods
+
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    [self assignDate:title];
+}
+
+#pragma mark - Lifecycle methods
+
+// Designated initializer
+- (id)initWithTitle:(NSString *)title link:(NSString *)link description:(NSString *)htmlDescription {
+    self = [super init];
+    if (self) {
+        self.title = title;
+        self.link = link;
+        self.htmlDescription = htmlDescription;
+//        [self assignDate:title];
+    }
+    return self;
 }
 
 @end

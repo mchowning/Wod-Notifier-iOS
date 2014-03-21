@@ -14,6 +14,7 @@
 @interface CFRMainTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *wodList;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
@@ -25,6 +26,7 @@
     NSDictionary *userInfo = notification.userInfo;
     self.wodList = userInfo[UPDATE_NOTIFICATION_KEY];
     [self.tableView reloadData];
+    self.tableView.hidden = NO;
 }
 
 #pragma mark - Getter and Setter methods
@@ -36,6 +38,14 @@
     return _wodList;
 }
 
+- (NSDateFormatter *)dateFormatter {
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        _dateFormatter.dateFormat = @"eeee, MMMM dd, yyyy";
+    }
+    return _dateFormatter;
+}
+
 #pragma mark - Lifecycle methods
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,7 +54,7 @@
                                              selector:@selector(wodsWereUpdated:)
                                                  name:UPDATE_NOTIFICATION_KEY
                                                object:nil];
-    
+    self.tableView.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -76,9 +86,10 @@
             NSLog(@"Not right of cell?!?!?!");
         }
     }
-    id <CFRWod> wod = self.wodList[indexPath.row];  // TODO Why no pointer here?
+    id <CFRWod> wod = self.wodList[indexPath.row];
     cell.titleLabel.text = wod.title;
-    cell.dateLabel.text = @"Xxxxday, XXXXX ##";
+    NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
+    cell.dateLabel.text = dateString;
     NSAttributedString *wodDescriptionText = [wod getAttributedStringDescription];
     cell.descriptionLabel.attributedText= wodDescriptionText;
     
