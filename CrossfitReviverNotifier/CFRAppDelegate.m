@@ -19,7 +19,8 @@
     [[[CFRUpdater alloc] init] update];
     
     CFRMainTableViewController *tableController = [[CFRMainTableViewController alloc] init];
-    self.window.rootViewController = tableController;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableController];
+    self.window.rootViewController = navController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
