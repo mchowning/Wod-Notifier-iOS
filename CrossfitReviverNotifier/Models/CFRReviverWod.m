@@ -10,4 +10,14 @@
 
 @implementation CFRReviverWod
 
+#pragma mark - NSCopying protocol methods
+
+- (id)copyWithZone:(NSZone *)zone {
+    CFRReviverWod *newWod = [[self class] allocWithZone:zone];
+    newWod.title = [_title copyWithZone:zone];
+    newWod.link = [_link copyWithZone:zone];
+    newWod.htmlDescription = [_htmlDescription copyWithZone:zone];
+    return newWod;
+}
+
 @end

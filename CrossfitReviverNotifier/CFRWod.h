@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CFRWod <NSObject>
+@protocol CFRWod <NSObject, NSCopying>
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *link;
+@property (strong, nonatomic) NSString *htmlDescription;
 @property (strong, readonly, nonatomic) NSDate *date;
 
 @end
