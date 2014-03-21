@@ -83,7 +83,7 @@
         if ([topLevelObjects[0] isKindOfClass:[CFRWodTableViewCell class]]) {
             cell = [topLevelObjects firstObject];
         } else {
-            NSLog(@"Not right of cell?!?!?!");
+            @throw([NSException exceptionWithName:@"Incorrect class" reason:@"Improper class received from Nib" userInfo:nil]);
         }
     }
     id <CFRWod> wod = self.wodList[indexPath.row];
