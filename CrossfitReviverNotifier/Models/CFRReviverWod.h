@@ -15,6 +15,6 @@
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSString *htmlDescription;
 @property (strong, readonly, nonatomic) NSDate *date;
-@property (strong, readonly, nonatomic) NSString *uniqueID;
+@property (readonly, nonatomic) WodSource wodSource;
 
 @end

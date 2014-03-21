@@ -11,7 +11,6 @@
 @interface CFRReviverWod()
 
 @property (nonatomic, strong) NSDate *date;
-@property (nonatomic, strong) NSString *uniqueID;
 
 @end
 
@@ -39,18 +38,8 @@
     [self assignDate:title];
 }
 
-#pragma mark - Lifecycle methods
-
-// Designated initializer
-- (id)initWithTitle:(NSString *)title link:(NSString *)link description:(NSString *)htmlDescription {
-    self = [super init];
-    if (self) {
-        self.title = title;
-        self.link = link;
-        self.htmlDescription = htmlDescription;
-//        [self assignDate:title];
-    }
-    return self;
+- (WodSource)wodSource {
+    return CrossfitReviverWebsite;
 }
 
 @end
