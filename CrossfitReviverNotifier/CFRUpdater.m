@@ -14,7 +14,14 @@
 
 - (void)update {
     CFRWodDownloader *wodDownloader = [[CFRWodDownloader alloc] init];
-    [wodDownloader downloadWods];
+    [wodDownloader downloadWods:self];
+}
+
+- (void)updateReceived:(NSArray *)downloadedWods {
+    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_NOTIFICATION_KEY
+                                                        object:self
+                                                      userInfo:@{UPDATE_NOTIFICATION_KEY : downloadedWods}];
+    
 }
 
 @end

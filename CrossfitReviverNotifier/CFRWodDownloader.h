@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CFRUpdater.h"
 
 @interface CFRWodDownloader : NSObject <NSXMLParserDelegate>
 
 extern NSString * const UPDATE_NOTIFICATION_KEY;
 
-- (void)downloadWods;
+- (void)downloadWods:(CFRUpdater *)updater;
 
 @end
 

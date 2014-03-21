@@ -134,13 +134,10 @@
 		2485674518DB5CD3006FFE27 /* CrossfitReviverNotifier */ = {
 			isa = PBXGroup;
 			children = (
-				243E6F3518DB6F080056E930 /* CFRUpdater.h */,
-				243E6F3618DB6F080056E930 /* CFRUpdater.m */,
 				24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */,
 				24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */,
 				24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */,
-				243E6F3818DB702C0056E930 /* CFRWodDownloader.h */,
-				243E6F3918DB702C0056E930 /* CFRWodDownloader.m */,
+				24FBF77118DC54C800376423 /* Update */,
 				2485676F18DB636C006FFE27 /* Models */,
 				2485674618DB5CD3006FFE27 /* Supporting Files */,
 			);
@@ -187,6 +184,17 @@
 				2485677118DB646D006FFE27 /* CFRReviverWod.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		24FBF77118DC54C800376423 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				243E6F3518DB6F080056E930 /* CFRUpdater.h */,
+				243E6F3618DB6F080056E930 /* CFRUpdater.m */,
+				243E6F3818DB702C0056E930 /* CFRWodDownloader.h */,
+				243E6F3918DB702C0056E930 /* CFRWodDownloader.m */,
+			);
+			name = Update;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

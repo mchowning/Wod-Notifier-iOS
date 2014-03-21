@@ -20,7 +20,7 @@
 #pragma mark - Notification method
 
 - (void)wodsWereUpdated:(NSNotification *)notification {
-    NSLog(@"Table received notificaiton of Wod update");
+    NSLog(@"Table received notification of Wod update");
     NSDictionary *userInfo = notification.userInfo;
     _wodList = userInfo[UPDATE_NOTIFICATION_KEY];
     [self.tableView reloadData];

@@ -11,5 +11,6 @@
 @interface CFRUpdater : NSObject
 
 - (void)update;
+- (void)updateReceived:(NSArray *)downloadedWods;
 
 @end

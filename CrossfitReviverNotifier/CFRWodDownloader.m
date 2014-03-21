@@ -23,6 +23,7 @@ typedef enum RSSTag {
 @property (nonatomic) RSSTag tagCurrentlyWithin;
 @property (nonatomic, strong) CFRReviverWod *currentWod;
 @property (nonatomic, strong) NSMutableArray *downloadedWods;
+@property (nonatomic, strong) CFRUpdater *updaterForCallback;
 
 @end
 
@@ -34,7 +35,9 @@ static NSString * const URL_STRING =
 
 
 
-- (void)downloadWods {
+- (void)downloadWods:(CFRUpdater *)updater {
+    
+    _updaterForCallback = updater;
     
     NSURL *url = [NSURL URLWithString:URL_STRING];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -116,9 +119,7 @@ static NSString * const URL_STRING =
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_NOTIFICATION_KEY
-                                                        object:self
-                                                      userInfo:@{UPDATE_NOTIFICATION_KEY : _downloadedWods}];
+    [_updaterForCallback updateReceived:_downloadedWods];
 }
 
 #pragma mark - Lifecycle methods
