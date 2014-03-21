@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3618DB6F080056E930 /* CFRUpdater.m */; };
 		243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3918DB702C0056E930 /* CFRWodDownloader.m */; };
+		247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */; };
 		2485674018DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
 		2485674218DB5CD3006FFE27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674118DB5CD3006FFE27 /* CoreGraphics.framework */; };
 		2485674418DB5CD3006FFE27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674318DB5CD3006FFE27 /* UIKit.framework */; };
@@ -44,6 +45,7 @@
 		243E6F3618DB6F080056E930 /* CFRUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRUpdater.m; sourceTree = "<group>"; };
 		243E6F3818DB702C0056E930 /* CFRWodDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRWodDownloader.h; sourceTree = "<group>"; };
 		243E6F3918DB702C0056E930 /* CFRWodDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodDownloader.m; sourceTree = "<group>"; };
+		247EFD6D18DCC70C00E12583 /* WodCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WodCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossfitReviverNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485673F18DB5CD3006FFE27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2485674118DB5CD3006FFE27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		247EFD6B18DCC6E900E12583 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		2485673318DB5CD3006FFE27 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		2485676F18DB636C006FFE27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				247EFD6B18DCC6E900E12583 /* Core Data */,
 				24FBF77A18DC7FD100376423 /* CFRWod.h */,
 				2485677018DB646D006FFE27 /* CFRReviverWod.h */,
 				2485677118DB646D006FFE27 /* CFRReviverWod.m */,
@@ -385,6 +396,7 @@
 				24FBF77618DC7EF700376423 /* CFRWodTableViewCell.m in Sources */,
 				2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */,
 				2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */,
+				247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */,
 				24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */,
 				2485674C18DB5CD3006FFE27 /* main.m in Sources */,
 				243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */,
@@ -603,6 +615,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				247EFD6D18DCC70C00E12583 /* WodCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 247EFD6D18DCC70C00E12583 /* WodCoreDataModel.xcdatamodel */;
+			path = WodCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2485673418DB5CD3006FFE27 /* Project object */;
 }

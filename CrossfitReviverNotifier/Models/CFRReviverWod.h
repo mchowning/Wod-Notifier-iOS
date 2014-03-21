@@ -9,11 +9,12 @@
 #import "CFRWod.h"
 #import <Foundation/Foundation.h>
 
-@interface CFRReviverWod : NSObject <CFRWod>
+@interface CFRReviverWod : NSObject
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSString *htmlDescription;
 @property (strong, readonly, nonatomic) NSDate *date;
+@property (strong, readonly, nonatomic) NSString *uniqueID;
 
 @end

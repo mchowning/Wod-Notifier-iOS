@@ -112,7 +112,7 @@ static NSString * const URL_STRING =
      qualifiedName:(NSString *)qName
 {
     if (self.tagCurrentlyWithin == DESCRIPTION) {
-        [self.downloadedWods addObject:[self.currentWod copy]];
+        [self.downloadedWods addObject:self.currentWod];
         self.currentWod = nil;
     }
     self.tagCurrentlyWithin = UNKNOWN;
