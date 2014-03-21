@@ -1,1259 +1,578 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>243E6F3518DB6F080056E930</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CFRUpdater.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>243E6F3618DB6F080056E930</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CFRUpdater.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>243E6F3718DB6F080056E930</key>
-		<dict>
-			<key>fileRef</key>
-			<string>243E6F3618DB6F080056E930</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>243E6F3818DB702C0056E930</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CFRWodDownloader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>243E6F3918DB702C0056E930</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CFRWodDownloader.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>243E6F3A18DB702C0056E930</key>
-		<dict>
-			<key>fileRef</key>
-			<string>243E6F3918DB702C0056E930</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485673318DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485674518DB5CD3006FFE27</string>
-				<string>2485675E18DB5CD3006FFE27</string>
-				<string>2485673E18DB5CD3006FFE27</string>
-				<string>2485673D18DB5CD3006FFE27</string>
-				<string>3B8B7040465C4B77A89F7DCB</string>
-				<string>5D422CFF901442159CE8843D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485673418DB5CD3006FFE27</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>CFR</string>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Matt Chowning</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>2485675618DB5CD3006FFE27</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>2485673B18DB5CD3006FFE27</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2485673718DB5CD3006FFE27</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>2485673318DB5CD3006FFE27</string>
-			<key>productRefGroup</key>
-			<string>2485673D18DB5CD3006FFE27</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>2485673B18DB5CD3006FFE27</string>
-				<string>2485675618DB5CD3006FFE27</string>
-			</array>
-		</dict>
-		<key>2485673718DB5CD3006FFE27</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2485676618DB5CD3006FFE27</string>
-				<string>2485676718DB5CD3006FFE27</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2485673818DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485677218DB646D006FFE27</string>
-				<string>2485675018DB5CD3006FFE27</string>
-				<string>2485674C18DB5CD3006FFE27</string>
-				<string>243E6F3A18DB702C0056E930</string>
-				<string>243E6F3718DB6F080056E930</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485673918DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485674218DB5CD3006FFE27</string>
-				<string>2485674418DB5CD3006FFE27</string>
-				<string>2485674018DB5CD3006FFE27</string>
-				<string>9D2FE0AC08AC481FBE2A40E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485673A18DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485674A18DB5CD3006FFE27</string>
-				<string>2485675218DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485673B18DB5CD3006FFE27</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2485676818DB5CD3006FFE27</string>
-			<key>buildPhases</key>
-			<array>
-				<string>2B3A3772145547E29EA35A70</string>
-				<string>2485673818DB5CD3006FFE27</string>
-				<string>2485673918DB5CD3006FFE27</string>
-				<string>2485673A18DB5CD3006FFE27</string>
-				<string>5EDD7A44601B447EBCA73BC1</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>CrossfitReviverNotifier</string>
-			<key>productName</key>
-			<string>CrossfitReviverNotifier</string>
-			<key>productReference</key>
-			<string>2485673C18DB5CD3006FFE27</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>2485673C18DB5CD3006FFE27</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifier.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2485673D18DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485673C18DB5CD3006FFE27</string>
-				<string>2485675718DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485673E18DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485673F18DB5CD3006FFE27</string>
-				<string>2485674118DB5CD3006FFE27</string>
-				<string>2485674318DB5CD3006FFE27</string>
-				<string>2485675818DB5CD3006FFE27</string>
-				<string>2C802D9D976046F3BEA9C577</string>
-				<string>D62DC7D28C2B482084C542A8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485673F18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>2485674018DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485673F18DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485674118DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>2485674218DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674118DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485674318DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>2485674418DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674318DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485674518DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>243E6F3518DB6F080056E930</string>
-				<string>243E6F3618DB6F080056E930</string>
-				<string>243E6F3818DB702C0056E930</string>
-				<string>243E6F3918DB702C0056E930</string>
-				<string>2485676F18DB636C006FFE27</string>
-				<string>2485674618DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifier</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674618DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485674E18DB5CD3006FFE27</string>
-				<string>2485674F18DB5CD3006FFE27</string>
-				<string>2485675118DB5CD3006FFE27</string>
-				<string>2485674718DB5CD3006FFE27</string>
-				<string>2485674818DB5CD3006FFE27</string>
-				<string>2485674B18DB5CD3006FFE27</string>
-				<string>2485674D18DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674718DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifier-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674818DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485674918DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674918DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674A18DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674818DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485674B18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674C18DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674B18DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485674D18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifier-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674E18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CFRAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485674F18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CFRAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485675018DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674F18DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485675118DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485675218DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485675118DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485675318DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485677418DB6787006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485675418DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485675918DB5CD3006FFE27</string>
-				<string>2485675B18DB5CD3006FFE27</string>
-				<string>2485675A18DB5CD3006FFE27</string>
-				<string>D79A3546F60C4C49855CF74D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485675518DB5CD3006FFE27</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2485676318DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2485675618DB5CD3006FFE27</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2485676B18DB5CD3006FFE27</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6A9B7FDE50B046B68932021E</string>
-				<string>2485675318DB5CD3006FFE27</string>
-				<string>2485675418DB5CD3006FFE27</string>
-				<string>2485675518DB5CD3006FFE27</string>
-				<string>662BCFF106294C1DB1D1F0C4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>2485675D18DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>CrossfitReviverNotifierTests</string>
-			<key>productName</key>
-			<string>CrossfitReviverNotifierTests</string>
-			<key>productReference</key>
-			<string>2485675718DB5CD3006FFE27</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>2485675718DB5CD3006FFE27</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifierTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2485675818DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2485675918DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485675818DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485675A18DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485673F18DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485675B18DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485674318DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485675C18DB5CD3006FFE27</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>2485673418DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>2485673B18DB5CD3006FFE27</string>
-			<key>remoteInfo</key>
-			<string>CrossfitReviverNotifier</string>
-		</dict>
-		<key>2485675D18DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>2485673B18DB5CD3006FFE27</string>
-			<key>targetProxy</key>
-			<string>2485675C18DB5CD3006FFE27</string>
-		</dict>
-		<key>2485675E18DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485677318DB6787006FFE27</string>
-				<string>2485675F18DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifierTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485675F18DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485676018DB5CD3006FFE27</string>
-				<string>2485676118DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485676018DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>CrossfitReviverNotifierTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485676118DB5CD3006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485676218DB5CD3006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485676218DB5CD3006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485676318DB5CD3006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485676118DB5CD3006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485676618DB5CD3006FFE27</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<string></string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2485676718DB5CD3006FFE27</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<string></string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2485676818DB5CD3006FFE27</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2485676918DB5CD3006FFE27</string>
-				<string>2485676A18DB5CD3006FFE27</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2485676918DB5CD3006FFE27</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5D422CFF901442159CE8843D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2485676A18DB5CD3006FFE27</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5D422CFF901442159CE8843D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2485676B18DB5CD3006FFE27</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2485676C18DB5CD3006FFE27</string>
-				<string>2485676D18DB5CD3006FFE27</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2485676C18DB5CD3006FFE27</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3B8B7040465C4B77A89F7DCB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>CrossfitReviverNotifierTests/CrossfitReviverNotifierTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2485676D18DB5CD3006FFE27</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3B8B7040465C4B77A89F7DCB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>CrossfitReviverNotifierTests/CrossfitReviverNotifierTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2485676E18DB635C006FFE27</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CFRWod.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485676F18DB636C006FFE27</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2485676E18DB635C006FFE27</string>
-				<string>2485677018DB646D006FFE27</string>
-				<string>2485677118DB646D006FFE27</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Models</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485677018DB646D006FFE27</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CFRReviverWod.h</string>
-			<key>path</key>
-			<string>Models/CFRReviverWod.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485677118DB646D006FFE27</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>CFRReviverWod.m</string>
-			<key>path</key>
-			<string>Models/CFRReviverWod.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485677218DB646D006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485677118DB646D006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2485677318DB6787006FFE27</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SampleSpec.m</string>
-			<key>path</key>
-			<string>../SampleSpec.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2485677418DB6787006FFE27</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2485677318DB6787006FFE27</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2B3A3772145547E29EA35A70</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>2C802D9D976046F3BEA9C577</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-CrossfitReviverNotifierTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3B8B7040465C4B77A89F7DCB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-CrossfitReviverNotifierTests.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods-CrossfitReviverNotifierTests.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5D422CFF901442159CE8843D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5EDD7A44601B447EBCA73BC1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>662BCFF106294C1DB1D1F0C4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-CrossfitReviverNotifierTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6A9B7FDE50B046B68932021E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>9D2FE0AC08AC481FBE2A40E9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D62DC7D28C2B482084C542A8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D62DC7D28C2B482084C542A8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D79A3546F60C4C49855CF74D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2C802D9D976046F3BEA9C577</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>2485673418DB5CD3006FFE27</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3618DB6F080056E930 /* CFRUpdater.m */; };
+		243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3918DB702C0056E930 /* CFRWodDownloader.m */; };
+		2485674018DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
+		2485674218DB5CD3006FFE27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674118DB5CD3006FFE27 /* CoreGraphics.framework */; };
+		2485674418DB5CD3006FFE27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674318DB5CD3006FFE27 /* UIKit.framework */; };
+		2485674A18DB5CD3006FFE27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2485674818DB5CD3006FFE27 /* InfoPlist.strings */; };
+		2485674C18DB5CD3006FFE27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485674B18DB5CD3006FFE27 /* main.m */; };
+		2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485674F18DB5CD3006FFE27 /* CFRAppDelegate.m */; };
+		2485675218DB5CD3006FFE27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2485675118DB5CD3006FFE27 /* Images.xcassets */; };
+		2485675918DB5CD3006FFE27 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485675818DB5CD3006FFE27 /* XCTest.framework */; };
+		2485675A18DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
+		2485675B18DB5CD3006FFE27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674318DB5CD3006FFE27 /* UIKit.framework */; };
+		2485676318DB5CD3006FFE27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2485676118DB5CD3006FFE27 /* InfoPlist.strings */; };
+		2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677118DB646D006FFE27 /* CFRReviverWod.m */; };
+		2485677418DB6787006FFE27 /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677318DB6787006FFE27 /* SampleSpec.m */; };
+		24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */; };
+		24FBF77018DBE1C900376423 /* CFRMainTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */; };
+		9D2FE0AC08AC481FBE2A40E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62DC7D28C2B482084C542A8 /* libPods.a */; };
+		D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2485675C18DB5CD3006FFE27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2485673418DB5CD3006FFE27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2485673B18DB5CD3006FFE27;
+			remoteInfo = CrossfitReviverNotifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		243E6F3518DB6F080056E930 /* CFRUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRUpdater.h; sourceTree = "<group>"; };
+		243E6F3618DB6F080056E930 /* CFRUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRUpdater.m; sourceTree = "<group>"; };
+		243E6F3818DB702C0056E930 /* CFRWodDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRWodDownloader.h; sourceTree = "<group>"; };
+		243E6F3918DB702C0056E930 /* CFRWodDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodDownloader.m; sourceTree = "<group>"; };
+		2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossfitReviverNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2485673F18DB5CD3006FFE27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2485674118DB5CD3006FFE27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2485674318DB5CD3006FFE27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2485674718DB5CD3006FFE27 /* CrossfitReviverNotifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrossfitReviverNotifier-Info.plist"; sourceTree = "<group>"; };
+		2485674918DB5CD3006FFE27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2485674B18DB5CD3006FFE27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2485674D18DB5CD3006FFE27 /* CrossfitReviverNotifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossfitReviverNotifier-Prefix.pch"; sourceTree = "<group>"; };
+		2485674E18DB5CD3006FFE27 /* CFRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFRAppDelegate.h; sourceTree = "<group>"; };
+		2485674F18DB5CD3006FFE27 /* CFRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFRAppDelegate.m; sourceTree = "<group>"; };
+		2485675118DB5CD3006FFE27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2485675718DB5CD3006FFE27 /* CrossfitReviverNotifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossfitReviverNotifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2485675818DB5CD3006FFE27 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2485676018DB5CD3006FFE27 /* CrossfitReviverNotifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrossfitReviverNotifierTests-Info.plist"; sourceTree = "<group>"; };
+		2485676218DB5CD3006FFE27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2485676E18DB635C006FFE27 /* CFRWod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFRWod.h; sourceTree = "<group>"; };
+		2485677018DB646D006FFE27 /* CFRReviverWod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFRReviverWod.h; path = Models/CFRReviverWod.h; sourceTree = "<group>"; };
+		2485677118DB646D006FFE27 /* CFRReviverWod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFRReviverWod.m; path = Models/CFRReviverWod.m; sourceTree = "<group>"; };
+		2485677318DB6787006FFE27 /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleSpec.m; path = ../SampleSpec.m; sourceTree = "<group>"; };
+		24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRMainTableViewController.h; sourceTree = "<group>"; };
+		24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRMainTableViewController.m; sourceTree = "<group>"; };
+		24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFRMainTableViewController.xib; sourceTree = "<group>"; };
+		2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossfitReviverNotifierTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossfitReviverNotifierTests.xcconfig"; path = "Pods/Pods-CrossfitReviverNotifierTests.xcconfig"; sourceTree = "<group>"; };
+		5D422CFF901442159CE8843D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D62DC7D28C2B482084C542A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2485673918DB5CD3006FFE27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485674218DB5CD3006FFE27 /* CoreGraphics.framework in Frameworks */,
+				2485674418DB5CD3006FFE27 /* UIKit.framework in Frameworks */,
+				2485674018DB5CD3006FFE27 /* Foundation.framework in Frameworks */,
+				9D2FE0AC08AC481FBE2A40E9 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2485675418DB5CD3006FFE27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485675918DB5CD3006FFE27 /* XCTest.framework in Frameworks */,
+				2485675B18DB5CD3006FFE27 /* UIKit.framework in Frameworks */,
+				2485675A18DB5CD3006FFE27 /* Foundation.framework in Frameworks */,
+				D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2485673318DB5CD3006FFE27 = {
+			isa = PBXGroup;
+			children = (
+				2485674518DB5CD3006FFE27 /* CrossfitReviverNotifier */,
+				2485675E18DB5CD3006FFE27 /* CrossfitReviverNotifierTests */,
+				2485673E18DB5CD3006FFE27 /* Frameworks */,
+				2485673D18DB5CD3006FFE27 /* Products */,
+				3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */,
+				5D422CFF901442159CE8843D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		2485673D18DB5CD3006FFE27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */,
+				2485675718DB5CD3006FFE27 /* CrossfitReviverNotifierTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2485673E18DB5CD3006FFE27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2485673F18DB5CD3006FFE27 /* Foundation.framework */,
+				2485674118DB5CD3006FFE27 /* CoreGraphics.framework */,
+				2485674318DB5CD3006FFE27 /* UIKit.framework */,
+				2485675818DB5CD3006FFE27 /* XCTest.framework */,
+				2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */,
+				D62DC7D28C2B482084C542A8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2485674518DB5CD3006FFE27 /* CrossfitReviverNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				243E6F3518DB6F080056E930 /* CFRUpdater.h */,
+				243E6F3618DB6F080056E930 /* CFRUpdater.m */,
+				24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */,
+				24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */,
+				24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */,
+				243E6F3818DB702C0056E930 /* CFRWodDownloader.h */,
+				243E6F3918DB702C0056E930 /* CFRWodDownloader.m */,
+				2485676F18DB636C006FFE27 /* Models */,
+				2485674618DB5CD3006FFE27 /* Supporting Files */,
+			);
+			path = CrossfitReviverNotifier;
+			sourceTree = "<group>";
+		};
+		2485674618DB5CD3006FFE27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2485674E18DB5CD3006FFE27 /* CFRAppDelegate.h */,
+				2485674F18DB5CD3006FFE27 /* CFRAppDelegate.m */,
+				2485675118DB5CD3006FFE27 /* Images.xcassets */,
+				2485674718DB5CD3006FFE27 /* CrossfitReviverNotifier-Info.plist */,
+				2485674818DB5CD3006FFE27 /* InfoPlist.strings */,
+				2485674B18DB5CD3006FFE27 /* main.m */,
+				2485674D18DB5CD3006FFE27 /* CrossfitReviverNotifier-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2485675E18DB5CD3006FFE27 /* CrossfitReviverNotifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				2485677318DB6787006FFE27 /* SampleSpec.m */,
+				2485675F18DB5CD3006FFE27 /* Supporting Files */,
+			);
+			path = CrossfitReviverNotifierTests;
+			sourceTree = "<group>";
+		};
+		2485675F18DB5CD3006FFE27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2485676018DB5CD3006FFE27 /* CrossfitReviverNotifierTests-Info.plist */,
+				2485676118DB5CD3006FFE27 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2485676F18DB636C006FFE27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2485676E18DB635C006FFE27 /* CFRWod.h */,
+				2485677018DB646D006FFE27 /* CFRReviverWod.h */,
+				2485677118DB646D006FFE27 /* CFRReviverWod.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2485673B18DB5CD3006FFE27 /* CrossfitReviverNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2485676818DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifier" */;
+			buildPhases = (
+				2B3A3772145547E29EA35A70 /* Check Pods Manifest.lock */,
+				2485673818DB5CD3006FFE27 /* Sources */,
+				2485673918DB5CD3006FFE27 /* Frameworks */,
+				2485673A18DB5CD3006FFE27 /* Resources */,
+				5EDD7A44601B447EBCA73BC1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrossfitReviverNotifier;
+			productName = CrossfitReviverNotifier;
+			productReference = 2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2485675618DB5CD3006FFE27 /* CrossfitReviverNotifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2485676B18DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifierTests" */;
+			buildPhases = (
+				6A9B7FDE50B046B68932021E /* Check Pods Manifest.lock */,
+				2485675318DB5CD3006FFE27 /* Sources */,
+				2485675418DB5CD3006FFE27 /* Frameworks */,
+				2485675518DB5CD3006FFE27 /* Resources */,
+				662BCFF106294C1DB1D1F0C4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2485675D18DB5CD3006FFE27 /* PBXTargetDependency */,
+			);
+			name = CrossfitReviverNotifierTests;
+			productName = CrossfitReviverNotifierTests;
+			productReference = 2485675718DB5CD3006FFE27 /* CrossfitReviverNotifierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2485673418DB5CD3006FFE27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CFR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Chowning";
+				TargetAttributes = {
+					2485675618DB5CD3006FFE27 = {
+						TestTargetID = 2485673B18DB5CD3006FFE27;
+					};
+				};
+			};
+			buildConfigurationList = 2485673718DB5CD3006FFE27 /* Build configuration list for PBXProject "CrossfitReviverNotifier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2485673318DB5CD3006FFE27;
+			productRefGroup = 2485673D18DB5CD3006FFE27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2485673B18DB5CD3006FFE27 /* CrossfitReviverNotifier */,
+				2485675618DB5CD3006FFE27 /* CrossfitReviverNotifierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2485673A18DB5CD3006FFE27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485674A18DB5CD3006FFE27 /* InfoPlist.strings in Resources */,
+				24FBF77018DBE1C900376423 /* CFRMainTableViewController.xib in Resources */,
+				2485675218DB5CD3006FFE27 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2485675518DB5CD3006FFE27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485676318DB5CD3006FFE27 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B3A3772145547E29EA35A70 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EDD7A44601B447EBCA73BC1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		662BCFF106294C1DB1D1F0C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CrossfitReviverNotifierTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A9B7FDE50B046B68932021E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2485673818DB5CD3006FFE27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */,
+				2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */,
+				24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */,
+				2485674C18DB5CD3006FFE27 /* main.m in Sources */,
+				243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */,
+				243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2485675318DB5CD3006FFE27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2485677418DB6787006FFE27 /* SampleSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2485675D18DB5CD3006FFE27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2485673B18DB5CD3006FFE27 /* CrossfitReviverNotifier */;
+			targetProxy = 2485675C18DB5CD3006FFE27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2485674818DB5CD3006FFE27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2485674918DB5CD3006FFE27 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2485676118DB5CD3006FFE27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2485676218DB5CD3006FFE27 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2485676618DB5CD3006FFE27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2485676718DB5CD3006FFE27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2485676918DB5CD3006FFE27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D422CFF901442159CE8843D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch";
+				INFOPLIST_FILE = "CrossfitReviverNotifier/CrossfitReviverNotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2485676A18DB5CD3006FFE27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D422CFF901442159CE8843D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch";
+				INFOPLIST_FILE = "CrossfitReviverNotifier/CrossfitReviverNotifier-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2485676C18DB5CD3006FFE27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CrossfitReviverNotifierTests/CrossfitReviverNotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2485676D18DB5CD3006FFE27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CrossfitReviverNotifier.app/CrossfitReviverNotifier";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossfitReviverNotifier/CrossfitReviverNotifier-Prefix.pch";
+				INFOPLIST_FILE = "CrossfitReviverNotifierTests/CrossfitReviverNotifierTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2485673718DB5CD3006FFE27 /* Build configuration list for PBXProject "CrossfitReviverNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2485676618DB5CD3006FFE27 /* Debug */,
+				2485676718DB5CD3006FFE27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2485676818DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2485676918DB5CD3006FFE27 /* Debug */,
+				2485676A18DB5CD3006FFE27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2485676B18DB5CD3006FFE27 /* Build configuration list for PBXNativeTarget "CrossfitReviverNotifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2485676C18DB5CD3006FFE27 /* Debug */,
+				2485676D18DB5CD3006FFE27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2485673418DB5CD3006FFE27 /* Project object */;
+}

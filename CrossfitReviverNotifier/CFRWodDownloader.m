@@ -28,8 +28,10 @@ typedef enum RSSTag {
 
 @implementation CFRWodDownloader
 
+NSString * const UPDATE_NOTIFICATION_KEY = @"update_notification_key";
 static NSString * const URL_STRING =
         @"http://www.crossfitreviver.com/index.php?format=feed&type=rss";
+
 
 
 - (void)downloadWods {
@@ -111,11 +113,12 @@ static NSString * const URL_STRING =
         _currentWod = nil;
     }
     _tagCurrentlyWithin = UNKNOWN;
-    
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    NSLog(@"DidEndDocument called");
+    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_NOTIFICATION_KEY
+                                                        object:self
+                                                      userInfo:@{UPDATE_NOTIFICATION_KEY : _downloadedWods}];
 }
 
 #pragma mark - Lifecycle methods

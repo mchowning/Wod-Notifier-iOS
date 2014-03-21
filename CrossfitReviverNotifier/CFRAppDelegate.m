@@ -8,6 +8,7 @@
 
 #import "CFRAppDelegate.h"
 #import "CFRUpdater.h"
+#import "CFRMainTableViewController.h"
 
 @implementation CFRAppDelegate
 
@@ -17,6 +18,8 @@
     
     [[[CFRUpdater alloc] init] update];
     
+    CFRMainTableViewController *tableController = [[CFRMainTableViewController alloc] init];
+    self.window.rootViewController = tableController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

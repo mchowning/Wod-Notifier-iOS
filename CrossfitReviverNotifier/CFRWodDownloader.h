@@ -10,6 +10,9 @@
 
 @interface CFRWodDownloader : NSObject <NSXMLParserDelegate>
 
+extern NSString * const UPDATE_NOTIFICATION_KEY;
+
 - (void)downloadWods;
 
 @end
+
