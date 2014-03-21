@@ -17,4 +17,6 @@
 @property (strong, readonly, nonatomic) NSDate *date;
 @property (readonly, nonatomic) WodSource wodSource;
 
+- (NSString *)getPlainTextDescription;
+
 @end

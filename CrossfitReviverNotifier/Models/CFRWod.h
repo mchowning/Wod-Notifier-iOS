@@ -22,5 +22,6 @@ typedef enum {
 @property (readonly, nonatomic) WodSource wodSource;
 
 - (NSAttributedString *)getAttributedStringDescription;
+- (NSString *)getPlainTextDescription;
 
 @end

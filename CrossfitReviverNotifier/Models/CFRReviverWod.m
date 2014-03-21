@@ -24,6 +24,10 @@
     return attributedStringDescription;
 }
 
+- (NSString *)getPlainTextDescription {
+    return [self getAttributedStringDescription].string;
+}
+
 - (void)assignDate:(NSString *)dateString {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"MM/dd/yy"];
