@@ -8,18 +8,30 @@
 
 #import "CFRWodTableViewCell.h"
 
+@interface CFRWodTableViewCell()
+
+@property (strong, nonatomic) IBOutlet UIView *topView;
+
+@end
+
 @implementation CFRWodTableViewCell
 
-- (void)awakeFromNib
-{
-    // Initialization code
+CGFloat const TOP_VIEW_HEIGHT = 90;
+
+#pragma mark - Class methods
+
++ (CGFloat)heightOfContent:(NSAttributedString *)descriptionText {
+    CGFloat screenWidth = [[UIScreen mainScreen] applicationFrame].size.width;
+    CGSize maxDimensions = (CGSize){screenWidth, CGFLOAT_MAX};
+    CGRect textBoundingRect = [descriptionText boundingRectWithSize:maxDimensions options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
+    CGFloat textHeight = ceil(textBoundingRect.size.height);
+    return textHeight + TOP_VIEW_HEIGHT;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
+#pragma mark - Lifecycle methods
 
-    // Configure the view for the selected state
+- (void)awakeFromNib {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 @end

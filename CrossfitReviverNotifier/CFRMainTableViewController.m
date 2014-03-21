@@ -9,6 +9,7 @@
 #import "CFRMainTableViewController.h"
 #import "CFRWodDownloader.h"
 #import "Models/CFRWod.h"
+#import "Views/CFRWodTableViewCell.h"
 
 @interface CFRMainTableViewController ()
 
@@ -66,14 +67,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellReuseIdentifier = @"reuse_identifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
+    CFRWodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuseIdentifier];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"CFRWodTableViewCell" owner:self options:nil];
+        if ([topLevelObjects[0] isKindOfClass:[CFRWodTableViewCell class]]) {
+            cell = [topLevelObjects firstObject];
+        } else {
+            NSLog(@"Not right of cell?!?!?!");
+        }
     }
     id <CFRWod> wod = self.wodList[indexPath.row];  // TODO Why no pointer here?
-    cell.textLabel.text = wod.title;
-    cell.detailTextLabel.text = wod.htmlDescription;
+    cell.titleLabel.text = wod.title;
+    cell.dateLabel.text = @"Xxxxday, XXXXX ##";
+    NSAttributedString *wodDescriptionText = [wod getAttributedStringDescription];
+    cell.descriptionLabel.attributedText= wodDescriptionText;
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+    heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id<CFRWod> cellWod = self.wodList[indexPath.row];
+    NSAttributedString *wodDescription = [cellWod getAttributedStringDescription];
+    return [CFRWodTableViewCell heightOfContent:wodDescription];
 }
 
 

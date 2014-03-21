@@ -23,7 +23,6 @@
 		2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677118DB646D006FFE27 /* CFRReviverWod.m */; };
 		2485677418DB6787006FFE27 /* SampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2485677318DB6787006FFE27 /* SampleSpec.m */; };
 		24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */; };
-		24FBF77018DBE1C900376423 /* CFRMainTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */; };
 		24FBF77618DC7EF700376423 /* CFRWodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FBF77418DC7EF700376423 /* CFRWodTableViewCell.m */; };
 		24FBF77718DC7EF700376423 /* CFRWodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBF77518DC7EF700376423 /* CFRWodTableViewCell.xib */; };
 		9D2FE0AC08AC481FBE2A40E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62DC7D28C2B482084C542A8 /* libPods.a */; };
@@ -65,7 +64,6 @@
 		2485677318DB6787006FFE27 /* SampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleSpec.m; path = ../SampleSpec.m; sourceTree = "<group>"; };
 		24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRMainTableViewController.h; sourceTree = "<group>"; };
 		24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRMainTableViewController.m; sourceTree = "<group>"; };
-		24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFRMainTableViewController.xib; sourceTree = "<group>"; };
 		24FBF77318DC7EF700376423 /* CFRWodTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFRWodTableViewCell.h; path = Views/CFRWodTableViewCell.h; sourceTree = "<group>"; };
 		24FBF77418DC7EF700376423 /* CFRWodTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFRWodTableViewCell.m; path = Views/CFRWodTableViewCell.m; sourceTree = "<group>"; };
 		24FBF77518DC7EF700376423 /* CFRWodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CFRWodTableViewCell.xib; path = Views/CFRWodTableViewCell.xib; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			children = (
 				24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */,
 				24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */,
-				24FBF76E18DBE1C900376423 /* CFRMainTableViewController.xib */,
 				24FBF77118DC54C800376423 /* Update */,
 			);
 			name = Controllers;
@@ -303,7 +300,6 @@
 			files = (
 				24FBF77718DC7EF700376423 /* CFRWodTableViewCell.xib in Resources */,
 				2485674A18DB5CD3006FFE27 /* InfoPlist.strings in Resources */,
-				24FBF77018DBE1C900376423 /* CFRMainTableViewController.xib in Resources */,
 				2485675218DB5CD3006FFE27 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

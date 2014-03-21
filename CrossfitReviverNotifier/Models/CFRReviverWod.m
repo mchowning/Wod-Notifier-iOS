@@ -10,6 +10,14 @@
 
 @implementation CFRReviverWod
 
+- (NSAttributedString *)getAttributedStringDescription {
+    NSData *htmlData = [self.htmlDescription dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *htmlOptions = @{NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
+                                 NSCharacterEncodingDocumentAttribute : @(NSUTF8StringEncoding)};
+    NSAttributedString *attributedStringDescription = [[NSAttributedString alloc] initWithData:htmlData options:htmlOptions documentAttributes:nil error:nil];
+    return attributedStringDescription;
+}
+
 #pragma mark - NSCopying protocol methods
 
 - (id)copyWithZone:(NSZone *)zone {

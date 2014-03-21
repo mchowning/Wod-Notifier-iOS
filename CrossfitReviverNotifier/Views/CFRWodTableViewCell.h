@@ -10,4 +10,10 @@
 
 @interface CFRWodTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
+@property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
+
++ (CGFloat)heightOfContent:(NSAttributedString *)descriptionText;
+
 @end

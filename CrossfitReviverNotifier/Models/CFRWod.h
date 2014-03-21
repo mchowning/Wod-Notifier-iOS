@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSString *htmlDescription;
 @property (strong, readonly, nonatomic) NSDate *date;
 
+- (NSAttributedString *)getAttributedStringDescription;
+
 @end
