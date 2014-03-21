@@ -37,7 +37,7 @@ static NSString * const URL_STRING =
 
 - (void)downloadWods:(CFRUpdater *)updater {
     
-    _updaterForCallback = updater;
+    self.updaterForCallback = updater;
     
     NSURL *url = [NSURL URLWithString:URL_STRING];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -72,18 +72,18 @@ static NSString * const URL_STRING =
     
     // Avoids picking up the "title" and "link" tags that precede the first Wod entry
     if ([elementName isEqualToString:@"item"]) {
-        _inItem = YES;
+        self.inItem = YES;
     }
     
-    if (_inItem) {
+    if (self.inItem) {
         if ([elementName isEqualToString:@"title"]) {
-            _tagCurrentlyWithin = TITLE;
-            assert(_currentWod == nil);
-            _currentWod = [[CFRReviverWod alloc] init];
+            self.tagCurrentlyWithin = TITLE;
+            assert(self.currentWod == nil);
+            self.currentWod = [[CFRReviverWod alloc] init];
         } else if ([elementName isEqualToString:@"link"]) {
-            _tagCurrentlyWithin = LINK;
+            self.tagCurrentlyWithin = LINK;
         } else if ([elementName isEqualToString:@"description"]) {
-            _tagCurrentlyWithin = DESCRIPTION;
+            self.tagCurrentlyWithin = DESCRIPTION;
         }
     }
 }
@@ -91,15 +91,15 @@ static NSString * const URL_STRING =
 - (void)    parser:(NSXMLParser *)parser
    foundCharacters:(NSString *)string
 {
-    switch (_tagCurrentlyWithin) {
+    switch (self.tagCurrentlyWithin) {
         case TITLE:
-            _currentWod.title = string;
+            self.currentWod.title = string;
             break;
         case LINK:
-            _currentWod.link = string;
+            self.currentWod.link = string;
             break;
         case DESCRIPTION:
-            _currentWod.htmlDescription = string;
+            self.currentWod.htmlDescription = string;
             break;
         default:
             break;
@@ -111,15 +111,15 @@ static NSString * const URL_STRING =
       namespaceURI:(NSString *)namespaceURI
      qualifiedName:(NSString *)qName
 {
-    if (_tagCurrentlyWithin == DESCRIPTION) {
-        [_downloadedWods addObject:[_currentWod copy]];
-        _currentWod = nil;
+    if (self.tagCurrentlyWithin == DESCRIPTION) {
+        [self.downloadedWods addObject:[self.currentWod copy]];
+        self.currentWod = nil;
     }
-    _tagCurrentlyWithin = UNKNOWN;
+    self.tagCurrentlyWithin = UNKNOWN;
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [_updaterForCallback updateReceived:_downloadedWods];
+    [self.updaterForCallback updateReceived:self.downloadedWods];
 }
 
 #pragma mark - Lifecycle methods
@@ -127,7 +127,7 @@ static NSString * const URL_STRING =
 - (id)init {
     self = [super init];
     if (self) {
-        _downloadedWods = [[NSMutableArray alloc] init];
+        self.downloadedWods = [[NSMutableArray alloc] init];
     }
     return self;
 }

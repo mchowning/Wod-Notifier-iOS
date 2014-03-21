@@ -14,9 +14,9 @@
 
 - (id)copyWithZone:(NSZone *)zone {
     CFRReviverWod *newWod = [[self class] allocWithZone:zone];
-    newWod.title = [_title copyWithZone:zone];
-    newWod.link = [_link copyWithZone:zone];
-    newWod.htmlDescription = [_htmlDescription copyWithZone:zone];
+    newWod.title = [self.title copyWithZone:zone];
+    newWod.link = [self.link copyWithZone:zone];
+    newWod.htmlDescription = [self.htmlDescription copyWithZone:zone];
     return newWod;
 }
 
