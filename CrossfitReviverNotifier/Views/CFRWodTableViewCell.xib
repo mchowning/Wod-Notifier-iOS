@@ -38,7 +38,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="7nZ-El-E21">
-                        <rect key="frame" x="20" y="90" width="280" height="214"/>
+                        <rect key="frame" x="20" y="95" width="280" height="209"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <attributedString key="attributedText">
                             <fragment content="Description">
@@ -54,12 +54,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="7nZ-El-E21" secondAttribute="bottom" id="1qh-ZW-5cY"/>
+                    <constraint firstItem="7nZ-El-E21" firstAttribute="top" secondItem="odd-yF-4ud" secondAttribute="bottom" constant="5" id="3Vy-t3-R5T"/>
                     <constraint firstAttribute="trailing" secondItem="odd-yF-4ud" secondAttribute="trailing" id="5TC-wu-UBu"/>
                     <constraint firstItem="odd-yF-4ud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="L9J-vv-foq"/>
                     <constraint firstItem="7nZ-El-E21" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="dRc-4E-ucU"/>
                     <constraint firstAttribute="trailing" secondItem="7nZ-El-E21" secondAttribute="trailing" constant="20" id="eOG-kA-2go"/>
                     <constraint firstItem="odd-yF-4ud" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lcJ-yq-fm0"/>
-                    <constraint firstItem="7nZ-El-E21" firstAttribute="top" secondItem="odd-yF-4ud" secondAttribute="bottom" id="o0f-XU-1ZS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
