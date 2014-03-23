@@ -10,6 +10,7 @@
 #import "CFRWodDownloader.h"
 #import "Models/CFRWod.h"
 #import "Views/CFRWodTableViewCell.h"
+#import "CFRCustomBusinessObject.h"
 
 @interface CFRMainTableViewController ()
 
@@ -23,10 +24,10 @@
 #pragma mark - Notification method
 
 - (void)wodsWereUpdated:(NSNotification *)notification {
-    NSDictionary *userInfo = notification.userInfo;
-    self.wodList = userInfo[UPDATE_NOTIFICATION_KEY];
+//    NSDictionary *userInfo = notification.userInfo;
+//    self.wodList = userInfo[UPDATE_NOTIFICATION_KEY];
     [self.tableView reloadData];
-    self.tableView.hidden = NO;
+//    self.tableView.hidden = NO;
 }
 
 #pragma mark - Getter and Setter methods
@@ -54,7 +55,7 @@
                                              selector:@selector(wodsWereUpdated:)
                                                  name:UPDATE_NOTIFICATION_KEY
                                                object:nil];
-    self.tableView.hidden = YES;
+//    self.tableView.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -71,7 +72,8 @@
 - (NSInteger)tableView:(UITableView *)tableView
            numberOfRowsInSection:(NSInteger)section
 {
-    return [self.wodList count];
+    CFRCustomBusinessObject *helper = [[CFRCustomBusinessObject alloc] init];
+    return [[helper getAllEntities] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -86,7 +88,8 @@
             @throw([NSException exceptionWithName:@"Incorrect class" reason:@"Improper class received from Nib" userInfo:nil]);
         }
     }
-    id <CFRWod> wod = self.wodList[indexPath.row];
+    
+    id <CFRWod> wod = [self getCellWod:indexPath.row];
     cell.titleLabel.text = wod.title;
     NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
     cell.dateLabel.text = dateString;
@@ -99,11 +102,17 @@
 - (CGFloat)tableView:(UITableView *)tableView
     heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id<CFRWod> cellWod = self.wodList[indexPath.row];
+    id<CFRWod> cellWod = [self getCellWod:indexPath.row];
     NSAttributedString *wodDescription = [cellWod getAttributedStringDescription];
     return [CFRWodTableViewCell heightOfContent:wodDescription];
 }
 
+- (id<CFRWod>)getCellWod:(int)cellNumber {
+    CFRCustomBusinessObject *helper = [[CFRCustomBusinessObject alloc] init];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+    NSArray *allWods = [helper getEntitiesSortedBy:sortDescriptor];
+    return allWods[cellNumber];
+}
 
 #pragma mark - TableView delegate
 

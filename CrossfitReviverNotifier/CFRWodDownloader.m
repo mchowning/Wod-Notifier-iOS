@@ -22,7 +22,7 @@ typedef enum RSSTag {
 @property (nonatomic) BOOL inItem;
 @property (nonatomic) RSSTag tagCurrentlyWithin;
 @property (nonatomic, strong) CFRReviverWod *currentWod;
-@property (nonatomic, strong) NSMutableArray *downloadedWods;
+@property (nonatomic, strong) NSMutableArray *downloadedWods; // of CFRReviverWod
 @property (nonatomic, strong) CFRUpdater *updaterForCallback;
 
 @end
@@ -119,7 +119,7 @@ static NSString * const URL_STRING =
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [self.updaterForCallback updateReceived:self.downloadedWods];
+    [self.updaterForCallback wodsDownloaded:self.downloadedWods];
 }
 
 #pragma mark - Lifecycle methods

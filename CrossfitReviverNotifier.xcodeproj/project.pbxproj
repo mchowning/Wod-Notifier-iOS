@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2435D80B18DD2B9F0067AD4D /* WodEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2435D80A18DD2B9F0067AD4D /* WodEntity.m */; };
+		2435D80E18DD2C040067AD4D /* mmBusinessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2435D80D18DD2C040067AD4D /* mmBusinessObject.m */; };
+		2435D81118DD2CBA0067AD4D /* CFRCustomBusinessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2435D81018DD2CBA0067AD4D /* CFRCustomBusinessObject.m */; };
 		243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3618DB6F080056E930 /* CFRUpdater.m */; };
 		243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3918DB702C0056E930 /* CFRWodDownloader.m */; };
 		247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */; };
@@ -41,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2435D80918DD2B9F0067AD4D /* WodEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WodEntity.h; sourceTree = "<group>"; };
+		2435D80A18DD2B9F0067AD4D /* WodEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WodEntity.m; sourceTree = "<group>"; };
+		2435D80C18DD2C040067AD4D /* mmBusinessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mmBusinessObject.h; path = Models/mmBusinessObject.h; sourceTree = "<group>"; };
+		2435D80D18DD2C040067AD4D /* mmBusinessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mmBusinessObject.m; path = Models/mmBusinessObject.m; sourceTree = "<group>"; };
+		2435D80F18DD2CBA0067AD4D /* CFRCustomBusinessObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFRCustomBusinessObject.h; path = Models/CFRCustomBusinessObject.h; sourceTree = "<group>"; };
+		2435D81018DD2CBA0067AD4D /* CFRCustomBusinessObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFRCustomBusinessObject.m; path = Models/CFRCustomBusinessObject.m; sourceTree = "<group>"; };
 		243E6F3518DB6F080056E930 /* CFRUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRUpdater.h; sourceTree = "<group>"; };
 		243E6F3618DB6F080056E930 /* CFRUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRUpdater.m; sourceTree = "<group>"; };
 		243E6F3818DB702C0056E930 /* CFRWodDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRWodDownloader.h; sourceTree = "<group>"; };
@@ -106,6 +115,12 @@
 			isa = PBXGroup;
 			children = (
 				247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */,
+				2435D80918DD2B9F0067AD4D /* WodEntity.h */,
+				2435D80A18DD2B9F0067AD4D /* WodEntity.m */,
+				2435D80C18DD2C040067AD4D /* mmBusinessObject.h */,
+				2435D80D18DD2C040067AD4D /* mmBusinessObject.m */,
+				2435D80F18DD2CBA0067AD4D /* CFRCustomBusinessObject.h */,
+				2435D81018DD2CBA0067AD4D /* CFRCustomBusinessObject.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -393,8 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2435D80E18DD2C040067AD4D /* mmBusinessObject.m in Sources */,
+				2435D80B18DD2B9F0067AD4D /* WodEntity.m in Sources */,
 				24FBF77618DC7EF700376423 /* CFRWodTableViewCell.m in Sources */,
 				2485677218DB646D006FFE27 /* CFRReviverWod.m in Sources */,
+				2435D81118DD2CBA0067AD4D /* CFRCustomBusinessObject.m in Sources */,
 				2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */,
 				247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */,
 				24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */,

@@ -24,7 +24,7 @@
     return attributedStringDescription;
 }
 
-- (NSString *)getPlainTextDescription {
+- (NSString *)PlainTextDescription {
     return [self getAttributedStringDescription].string;
 }
 
@@ -44,6 +44,11 @@
 
 - (WodSource)wodSource {
     return CrossfitReviverWebsite;
+}
+
+// uniqueID for CFR Wods is just the web link.
+- (NSString *)uniqueID {
+    return self.link;
 }
 
 @end

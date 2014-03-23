@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+    Unknown,
     CrossfitReviverWebsite,
     UserInput
 } WodSource;
@@ -16,12 +17,15 @@ typedef enum {
 @protocol CFRWod <NSObject>
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, readonly, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) NSString *htmlDescription;
-@property (strong, readonly, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSString *plainTextDescription;
+@property (nonatomic, retain) NSString *notes;
+@property (nonatomic, retain) NSString *userResults;
 @property (readonly, nonatomic) WodSource wodSource;
+@property (readonly, nonatomic) NSString *uniqueID;
 
 - (NSAttributedString *)getAttributedStringDescription;
-- (NSString *)getPlainTextDescription;
 
 @end
