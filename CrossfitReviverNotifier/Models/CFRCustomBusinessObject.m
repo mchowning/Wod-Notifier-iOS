@@ -56,4 +56,20 @@
     return [self getEntities:self.entityClassName sortedBy:sortDescriptor matchingPredicate:nil];
 }
 
+- (NSFetchedResultsController *)getFetchedResultsControllerWithSortDescriptors:(NSArray *)
+        sortDescriptors                                              cacheName:(NSString *)cacheName
+{
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity =
+	        [NSEntityDescription entityForName:self.entityClassName inManagedObjectContext:[self
+	                                                                                        managedObjectContext
+	         ]];
+	[fetchRequest setEntity:entity];
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	[fetchRequest setFetchBatchSize:20];
+	return [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+	                                           managedObjectContext:[self managedObjectContext]
+	                                             sectionNameKeyPath:nil cacheName:cacheName];
+}
+
 @end

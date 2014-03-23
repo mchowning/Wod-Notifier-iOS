@@ -14,12 +14,15 @@
 
 @interface CFRMainTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *wodList;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) CFRCustomBusinessObject *helper;
 
 @end
 
 @implementation CFRMainTableViewController
+
+static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 #pragma mark - Notification method
 
@@ -28,16 +31,12 @@
 //    self.wodList = userInfo[UPDATE_NOTIFICATION_KEY];
     [self.tableView reloadData];
 //    self.tableView.hidden = NO;
+    
+#warning take note
+    // Here do I need to reload a new fetchedResultsController in order to get a proper reload?
 }
 
 #pragma mark - Getter and Setter methods
-
-- (NSMutableArray *)wodList {
-    if (!_wodList) {
-        _wodList = [[NSMutableArray alloc] init];
-    }
-    return _wodList;
-}
 
 - (NSDateFormatter *)dateFormatter {
     if (!_dateFormatter) {
@@ -47,7 +46,34 @@
     return _dateFormatter;
 }
 
+- (CFRCustomBusinessObject *)helper {
+    if (!_helper) {
+        _helper = [[CFRCustomBusinessObject alloc] init];
+    }
+    return _helper;
+}
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (!_fetchedResultsController) {
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+        _fetchedResultsController =
+                    [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
+                                                                      cacheName:FETCHED_RESULTS_CACHE];
+#warning Use any fetchedResultsController delegate methods to force update on new data???
+    }
+    return _fetchedResultsController;
+}
+
 #pragma mark - Lifecycle methods
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSError *error;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        //exit(-1); // Fail
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -72,12 +98,21 @@
 - (NSInteger)tableView:(UITableView *)tableView
            numberOfRowsInSection:(NSInteger)section
 {
-    CFRCustomBusinessObject *helper = [[CFRCustomBusinessObject alloc] init];
-    return [[helper getAllEntities] count];
+    id sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    int numRows = [sectionInfo numberOfObjects];
+    return numRows;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CFRWodTableViewCell *cell = [self getTableViewCell:tableView];
+    id<CFRWod> cellWod = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self configureCell:cell fromWod:cellWod];
+    return cell;
+}
+
+- (CFRWodTableViewCell *)getTableViewCell:(UITableView *)tableView {
     NSString *cellReuseIdentifier = @"reuse_identifier";
     CFRWodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
     if (!cell) {
@@ -88,47 +123,25 @@
             @throw([NSException exceptionWithName:@"Incorrect class" reason:@"Improper class received from Nib" userInfo:nil]);
         }
     }
-    
-    id <CFRWod> wod = [self getCellWod:indexPath.row];
-    cell.titleLabel.text = wod.title;
-    NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
-    cell.dateLabel.text = dateString;
-    NSAttributedString *wodDescriptionText = [wod getAttributedStringDescription];
-    cell.descriptionLabel.attributedText= wodDescriptionText;
-    
     return cell;
+}
+
+- (void)configureCell:(CFRWodTableViewCell *)cell
+              fromWod:(id<CFRWod>)wod
+{
+	cell.titleLabel.text = wod.title;
+	NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
+	cell.dateLabel.text = dateString;
+	NSAttributedString *wodDescriptionText = [wod getAttributedStringDescription];
+	cell.descriptionLabel.attributedText= wodDescriptionText;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
     heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id<CFRWod> cellWod = [self getCellWod:indexPath.row];
+    id<CFRWod> cellWod = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSAttributedString *wodDescription = [cellWod getAttributedStringDescription];
     return [CFRWodTableViewCell heightOfContent:wodDescription];
 }
-
-- (id<CFRWod>)getCellWod:(int)cellNumber {
-    CFRCustomBusinessObject *helper = [[CFRCustomBusinessObject alloc] init];
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
-    NSArray *allWods = [helper getEntitiesSortedBy:sortDescriptor];
-    return allWods[cellNumber];
-}
-
-#pragma mark - TableView delegate
-
-/*
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
 
 @end

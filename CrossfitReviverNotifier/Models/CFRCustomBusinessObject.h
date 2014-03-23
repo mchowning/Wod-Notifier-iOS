@@ -24,5 +24,8 @@
 
 - (BOOL)wodAlreadyExists:(id<CFRWod>)newWod;
 - (NSMutableArray *)getEntitiesSortedBy:(NSSortDescriptor *)sortDescriptor;
+- (NSFetchedResultsController *)
+        getFetchedResultsControllerWithSortDescriptors:(NSArray *)sortDescriptors
+                                             cacheName:(NSString *)cacheName;
 
 @end
