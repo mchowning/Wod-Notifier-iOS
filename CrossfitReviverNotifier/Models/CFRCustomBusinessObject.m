@@ -61,15 +61,16 @@
 {
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity =
-	        [NSEntityDescription entityForName:self.entityClassName inManagedObjectContext:[self
-	                                                                                        managedObjectContext
-	         ]];
+	        [NSEntityDescription entityForName:self.entityClassName
+                        inManagedObjectContext:self.managedObjectContext];
 	[fetchRequest setEntity:entity];
 	[fetchRequest setSortDescriptors:sortDescriptors];
 	[fetchRequest setFetchBatchSize:20];
 	return [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-	                                           managedObjectContext:[self managedObjectContext]
-	                                             sectionNameKeyPath:nil cacheName:cacheName];
+	                                           managedObjectContext:self.managedObjectContext
+	                                             sectionNameKeyPath:nil
+                                                          cacheName:nil];
+    // change cacheName to cacheName variable
 }
 
 @end

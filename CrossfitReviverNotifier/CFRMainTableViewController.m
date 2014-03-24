@@ -27,8 +27,8 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 #pragma mark - Notification method
 
 - (void)wodsWereUpdated:(NSNotification *)notification {
-//    NSDictionary *userInfo = notification.userInfo;
-//    self.wodList = userInfo[UPDATE_NOTIFICATION_KEY];
+    [self getNewFetchedResultsController];
+    
     [self.tableView reloadData];
 //    self.tableView.hidden = NO;
     
@@ -59,8 +59,18 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
         _fetchedResultsController =
                     [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
                                                                       cacheName:FETCHED_RESULTS_CACHE];
+        _fetchedResultsController.delegate = self;
 #warning Use any fetchedResultsController delegate methods to force update on new data???
     }
+    return _fetchedResultsController;
+}
+
+- (NSFetchedResultsController *)getNewFetchedResultsController {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+    _fetchedResultsController =
+                [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
+                                                                  cacheName:FETCHED_RESULTS_CACHE];
+    _fetchedResultsController.delegate = self;
     return _fetchedResultsController;
 }
 
@@ -68,11 +78,15 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     NSError *error;
     if (![self.fetchedResultsController performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         //exit(-1); // Fail
     }
+    
+    [[[CFRUpdater alloc] init] update];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -143,5 +157,26 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
     NSAttributedString *wodDescription = [cellWod getAttributedStringDescription];
     return [CFRWodTableViewCell heightOfContent:wodDescription];
 }
+
+#pragma mark - NSFetchedResultsControllerDelegate methods
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    NSLog(@"delegate notified that content will change");
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    NSLog(@"delegate notified that object changed");
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    NSLog(@"delegate notified that section changed");
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    NSLog(@"delegate notified that content changed");
+}
+
 
 @end
