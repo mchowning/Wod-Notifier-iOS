@@ -22,7 +22,24 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[UIApplication sharedApplication]
+                setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
+    
     return YES;
+}
+
+-(void)application:(UIApplication *)application
+        performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"Background fetch initiated");
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.alertBody = @"Background fetch method called";
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    completionHandler(UIBackgroundFetchResultNoData);
 }
 
 @end

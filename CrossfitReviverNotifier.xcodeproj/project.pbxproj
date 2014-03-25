@@ -296,6 +296,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Matt Chowning";
 				TargetAttributes = {
+					2485673B18DB5CD3006FFE27 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					2485675618DB5CD3006FFE27 = {
 						TestTargetID = 2485673B18DB5CD3006FFE27;
 					};

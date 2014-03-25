@@ -47,6 +47,10 @@
 	    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATE_NOTIFICATION_KEY
 	                                                        object:self
 	                                                      userInfo:nil];
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        localNotification.alertBody = @"Background fetch method called";
+//        localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:15];
+//        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     }
 }
 
