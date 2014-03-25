@@ -70,9 +70,11 @@
 }
 
 // Gets entities of the default type matching the predicate
-- (NSMutableArray *)getEntitiesMatchingPredicate: (NSPredicate *)predicate
+- (NSMutableArray *)getEntitiesMatchingPredicate:(NSPredicate *)predicate
 {
-    return [self getEntities:self.entityClassName sortedBy:nil matchingPredicate:predicate];
+    return [self getEntities:self.entityClassName
+                    sortedBy:nil
+           matchingPredicate:predicate];
 }
 
 // Gets entities of the default type matching the predicate string
@@ -83,7 +85,9 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString
                                                     arguments:variadicArguments];
     va_end(variadicArguments);
-    return [self getEntities:self.entityClassName sortedBy:nil matchingPredicate:predicate];
+    return [self getEntities:self.entityClassName
+                    sortedBy:nil
+           matchingPredicate:predicate];
 }
 
 // Get entities of the default type sorted by descriptor matching the predicate

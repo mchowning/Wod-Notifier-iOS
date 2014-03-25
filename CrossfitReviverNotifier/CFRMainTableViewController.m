@@ -27,13 +27,24 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 #pragma mark - Notification method
 
 - (void)wodsWereUpdated:(NSNotification *)notification {
+    /* Getting a new fetchedResultsController and fetching the entries because otherwise the
+     first download of entries is missed by the controller.  I do not think that this code is
+     neccessary for any of the subsequent downloads, and it would not be necessary if the delegate
+     methods were properly called on the first download.  I think it may be a problem related to
+     the fact that there is nothing in the table on the initial fetch, but I don't really know for
+     sure.  This is pretty hacky and should be cleaned up if possible. */
+    
     [self getNewFetchedResultsController];
-    
-    [self.tableView reloadData];
-//    self.tableView.hidden = NO;
-    
-#warning take note
-    // Here do I need to reload a new fetchedResultsController in order to get a proper reload?
+    self.fetchedResultsController.delegate = self;
+    NSError *error;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        //exit(-1); // Fail
+    }
+
+    [self.tableView reloadData];  // No idea why this is necessary to get initially downloaded
+                                  // entries, fetchResultsControllerDelegate methods should be
+                                  // being called.
 }
 
 #pragma mark - Getter and Setter methods
@@ -60,7 +71,6 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
                     [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
                                                                       cacheName:FETCHED_RESULTS_CACHE];
         _fetchedResultsController.delegate = self;
-#warning Use any fetchedResultsController delegate methods to force update on new data???
     }
     return _fetchedResultsController;
 }
@@ -78,8 +88,8 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    [self.tableView setHidden:YES]; // Avoids empty tableView showing on first load before
+                                    // entries are downloaded.
     NSError *error;
     if (![self.fetchedResultsController performFetch:&error]) {
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
@@ -95,7 +105,6 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
                                              selector:@selector(wodsWereUpdated:)
                                                  name:UPDATE_NOTIFICATION_KEY
                                                object:nil];
-//    self.tableView.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -120,9 +129,9 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.tableView setHidden:NO];
     CFRWodTableViewCell *cell = [self getTableViewCell:tableView];
-    id<CFRWod> cellWod = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [self configureCell:cell fromWod:cellWod];
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
@@ -136,13 +145,15 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
         } else {
             @throw([NSException exceptionWithName:@"Incorrect class" reason:@"Improper class received from Nib" userInfo:nil]);
         }
+        
     }
     return cell;
 }
 
 - (void)configureCell:(CFRWodTableViewCell *)cell
-              fromWod:(id<CFRWod>)wod
+          atIndexPath:(NSIndexPath *)indexPath
 {
+    id<CFRWod> wod = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	cell.titleLabel.text = wod.title;
 	NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
 	cell.dateLabel.text = dateString;
@@ -162,21 +173,45 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     NSLog(@"delegate notified that content will change");
+    
+    [self.tableView beginUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
 {
     NSLog(@"delegate notified that object changed");
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
-    NSLog(@"delegate notified that section changed");
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:(CFRWodTableViewCell *)[tableView cellForRowAtIndexPath:indexPath]
+                    atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     NSLog(@"delegate notified that content changed");
+    [self.tableView endUpdates];
 }
-
 
 @end

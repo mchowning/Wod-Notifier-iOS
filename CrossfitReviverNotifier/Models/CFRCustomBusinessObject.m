@@ -42,9 +42,6 @@
 	return entity;
 }
 
-// Look for match using title, date, and source???
-// If it is a CFRWod the best matching criterion is probably the link
-
 - (BOOL)wodAlreadyExists:(id<CFRWod>)newWod {
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uniqueID = %@", newWod.uniqueID];
@@ -53,11 +50,14 @@
 }
 
 - (NSMutableArray *)getEntitiesSortedBy:(NSSortDescriptor *)sortDescriptor {
-    return [self getEntities:self.entityClassName sortedBy:sortDescriptor matchingPredicate:nil];
+    return [self getEntities:self.entityClassName
+                    sortedBy:sortDescriptor
+           matchingPredicate:nil];
 }
 
-- (NSFetchedResultsController *)getFetchedResultsControllerWithSortDescriptors:(NSArray *)
-        sortDescriptors                                              cacheName:(NSString *)cacheName
+- (NSFetchedResultsController *)
+        getFetchedResultsControllerWithSortDescriptors:(NSArray *)sortDescriptors
+                                             cacheName:(NSString *)cacheName
 {
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity =
@@ -70,7 +70,7 @@
 	                                           managedObjectContext:self.managedObjectContext
 	                                             sectionNameKeyPath:nil
                                                           cacheName:nil];
-    // change cacheName to cacheName variable
+    // change cacheName to cacheName variable to improve efficiency?
 }
 
 @end
