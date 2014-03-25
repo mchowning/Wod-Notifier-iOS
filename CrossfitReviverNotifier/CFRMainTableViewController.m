@@ -192,8 +192,8 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:(CFRWodTableViewCell *)[tableView cellForRowAtIndexPath:indexPath]
-                    atIndexPath:indexPath];
+            [tableView reloadRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationAutomatic];
             break;
             
         case NSFetchedResultsChangeMove:
