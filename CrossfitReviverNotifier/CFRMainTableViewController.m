@@ -114,10 +114,6 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView
            numberOfRowsInSection:(NSInteger)section
 {
