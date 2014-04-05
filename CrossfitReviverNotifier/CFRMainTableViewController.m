@@ -10,11 +10,11 @@
 #import "CFRWodDownloader.h"
 #import "Models/CFRWod.h"
 #import "Views/CFRWodTableViewCell.h"
+#import "Views/CFRWodTableViewCell+configureCell.h"
 #import "CFRCustomBusinessObject.h"
 
 @interface CFRMainTableViewController ()
 
-@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) CFRCustomBusinessObject *helper;
 
@@ -49,45 +49,25 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
 #pragma mark - Getter and Setter methods
 
-- (NSDateFormatter *)dateFormatter {
-    if (!_dateFormatter) {
-        _dateFormatter = [[NSDateFormatter alloc] init];
-        _dateFormatter.dateFormat = @"eeee, MMMM dd, yyyy";
-    }
-    return _dateFormatter;
-}
-
-- (CFRCustomBusinessObject *)helper {
-    if (!_helper) {
-        _helper = [[CFRCustomBusinessObject alloc] init];
-    }
-    return _helper;
-}
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    if (!_fetchedResultsController) {
-        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
-        _fetchedResultsController =
-                    [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
-                                                                      cacheName:FETCHED_RESULTS_CACHE];
-        _fetchedResultsController.delegate = self;
-    }
-    return _fetchedResultsController;
-}
-
 - (NSFetchedResultsController *)getNewFetchedResultsController {
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
-    _fetchedResultsController =
+    self.fetchedResultsController =
                 [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
                                                                   cacheName:FETCHED_RESULTS_CACHE];
-    _fetchedResultsController.delegate = self;
-    return _fetchedResultsController;
+    self.fetchedResultsController.delegate = self;
+    return self.fetchedResultsController;
 }
 
 #pragma mark - Lifecycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.helper = [[CFRCustomBusinessObject alloc] init];
+    [self getNewFetchedResultsController];
+    
+    
+    
     [self.tableView setHidden:YES]; // Avoids empty tableView showing on first load before
                                     // entries are downloaded.
     NSError *error;
@@ -139,9 +119,8 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
         if ([topLevelObjects[0] isKindOfClass:[CFRWodTableViewCell class]]) {
             cell = [topLevelObjects firstObject];
         } else {
-            @throw([NSException exceptionWithName:@"Incorrect class" reason:@"Improper class received from Nib" userInfo:nil]);
+            [NSException raise:@"Incorrect class" format:@"Improper class received from Nib"];
         }
-        
     }
     return cell;
 }
@@ -150,11 +129,7 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
           atIndexPath:(NSIndexPath *)indexPath
 {
     id<CFRWod> wod = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	cell.titleLabel.text = wod.title;
-	NSString *dateString = [self.dateFormatter stringFromDate:wod.date];
-	cell.dateLabel.text = dateString;
-	NSAttributedString *wodDescriptionText = [wod getAttributedStringDescription];
-	cell.descriptionLabel.attributedText= wodDescriptionText;
+    [cell configureCellFromWodEntity:wod];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView

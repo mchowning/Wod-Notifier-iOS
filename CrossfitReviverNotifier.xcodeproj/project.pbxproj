@@ -12,6 +12,9 @@
 		2435D81118DD2CBA0067AD4D /* CFRCustomBusinessObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2435D81018DD2CBA0067AD4D /* CFRCustomBusinessObject.m */; };
 		243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3618DB6F080056E930 /* CFRUpdater.m */; };
 		243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 243E6F3918DB702C0056E930 /* CFRWodDownloader.m */; };
+		24778B7B18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */; };
+		24778B7C18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */; };
+		24778B7F18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */; };
 		247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */; };
 		2485674018DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
 		2485674218DB5CD3006FFE27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674118DB5CD3006FFE27 /* CoreGraphics.framework */; };
@@ -54,6 +57,9 @@
 		243E6F3618DB6F080056E930 /* CFRUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRUpdater.m; sourceTree = "<group>"; };
 		243E6F3818DB702C0056E930 /* CFRWodDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRWodDownloader.h; sourceTree = "<group>"; };
 		243E6F3918DB702C0056E930 /* CFRWodDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodDownloader.m; sourceTree = "<group>"; };
+		24778B7918EF6781009C0021 /* CFRWodTableViewCell+configureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CFRWodTableViewCell+configureCell.h"; path = "Views/CFRWodTableViewCell+configureCell.h"; sourceTree = "<group>"; };
+		24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CFRWodTableViewCell+configureCell.m"; path = "Views/CFRWodTableViewCell+configureCell.m"; sourceTree = "<group>"; };
+		24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodTableViewCell_configureCellSpec.m; sourceTree = "<group>"; };
 		247EFD6D18DCC70C00E12583 /* WodCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WodCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossfitReviverNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485673F18DB5CD3006FFE27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				2485677318DB6787006FFE27 /* SampleSpec.m */,
+				24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */,
 				2485675F18DB5CD3006FFE27 /* Supporting Files */,
 			);
 			path = CrossfitReviverNotifierTests;
@@ -205,10 +212,10 @@
 		2485676F18DB636C006FFE27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				247EFD6B18DCC6E900E12583 /* Core Data */,
 				24FBF77A18DC7FD100376423 /* CFRWod.h */,
 				2485677018DB646D006FFE27 /* CFRReviverWod.h */,
 				2485677118DB646D006FFE27 /* CFRReviverWod.m */,
+				247EFD6B18DCC6E900E12583 /* Core Data */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 				24FBF77318DC7EF700376423 /* CFRWodTableViewCell.h */,
 				24FBF77418DC7EF700376423 /* CFRWodTableViewCell.m */,
 				24FBF77518DC7EF700376423 /* CFRWodTableViewCell.xib */,
+				24778B7918EF6781009C0021 /* CFRWodTableViewCell+configureCell.h */,
+				24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				2435D81118DD2CBA0067AD4D /* CFRCustomBusinessObject.m in Sources */,
 				2485675018DB5CD3006FFE27 /* CFRAppDelegate.m in Sources */,
 				247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */,
+				24778B7B18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */,
 				24FBF76F18DBE1C900376423 /* CFRMainTableViewController.m in Sources */,
 				2485674C18DB5CD3006FFE27 /* main.m in Sources */,
 				243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */,
@@ -434,6 +444,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2485677418DB6787006FFE27 /* SampleSpec.m in Sources */,
+				24778B7F18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m in Sources */,
+				24778B7C18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
