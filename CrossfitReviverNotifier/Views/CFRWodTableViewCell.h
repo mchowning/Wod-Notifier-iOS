@@ -16,4 +16,6 @@
 
 + (CGFloat)heightOfContent:(NSAttributedString *)descriptionText;
 
+extern CGFloat const TOP_VIEW_HEIGHT;
+
 @end

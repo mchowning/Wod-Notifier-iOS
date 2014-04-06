@@ -15,6 +15,7 @@
 		24778B7B18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */; };
 		24778B7C18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */; };
 		24778B7F18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */; };
+		24778B8118F04CB9009C0021 /* CFRWodTableViewCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 24778B8018F04CB9009C0021 /* CFRWodTableViewCellSpec.m */; };
 		247EFD6E18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 247EFD6C18DCC70C00E12583 /* WodCoreDataModel.xcdatamodeld */; };
 		2485674018DB5CD3006FFE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485673F18DB5CD3006FFE27 /* Foundation.framework */; };
 		2485674218DB5CD3006FFE27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2485674118DB5CD3006FFE27 /* CoreGraphics.framework */; };
@@ -60,6 +61,7 @@
 		24778B7918EF6781009C0021 /* CFRWodTableViewCell+configureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CFRWodTableViewCell+configureCell.h"; path = "Views/CFRWodTableViewCell+configureCell.h"; sourceTree = "<group>"; };
 		24778B7A18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CFRWodTableViewCell+configureCell.m"; path = "Views/CFRWodTableViewCell+configureCell.m"; sourceTree = "<group>"; };
 		24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodTableViewCell_configureCellSpec.m; sourceTree = "<group>"; };
+		24778B8018F04CB9009C0021 /* CFRWodTableViewCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRWodTableViewCellSpec.m; sourceTree = "<group>"; };
 		247EFD6D18DCC70C00E12583 /* WodCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WodCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2485673C18DB5CD3006FFE27 /* CrossfitReviverNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossfitReviverNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2485673F18DB5CD3006FFE27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2485677318DB6787006FFE27 /* SampleSpec.m */,
+				24778B8018F04CB9009C0021 /* CFRWodTableViewCellSpec.m */,
 				24778B7D18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m */,
 				2485675F18DB5CD3006FFE27 /* Supporting Files */,
 			);
@@ -446,6 +449,7 @@
 				2485677418DB6787006FFE27 /* SampleSpec.m in Sources */,
 				24778B7F18EF6921009C0021 /* CFRWodTableViewCell_configureCellSpec.m in Sources */,
 				24778B7C18EF6781009C0021 /* CFRWodTableViewCell+configureCell.m in Sources */,
+				24778B8118F04CB9009C0021 /* CFRWodTableViewCellSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
