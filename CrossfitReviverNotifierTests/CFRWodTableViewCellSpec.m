@@ -57,6 +57,27 @@ describe(@"CFRWodTableViewCell", ^{
         [[theValue(calculatedTextHeight) should] equal:theValue(htmlStringHeightOnScreenAsAttributedText)];
     });
     
+    pending(@"accurately calculates content height when the html includes image link", ^{
+        
+        NSString *imageHtml = @"<p><a href=\"/images/stories/happy-st-patricks-day-banner.jpg\" class=\"highslide\"  onclick=\"return hs.expand(this)\"><img 	border=\"0\" style=\"Array\" src=\"/images/stories/thumbs/L2hvbWUzL212ZWxhcmRvL3B1YmxpY19odG1sL2ltYWdlcy9zdG9yaWVzL2hhcHB5LXN0LXBhdHJpY2tzLWRheS1iYW5uZXIuanBn.jpg\"/></a><div id=\"closebutton\" class=\"highslide-overlay closebutton\" onclick=\"return hs.close(this)\" title=\"Closekk\"></div></p>";
+        NSString *htmlStringWithImage = [htmlString stringByAppendingString:imageHtml];
+		NSAttributedString *attributedString = convertHtmlToAttributedString(htmlStringWithImage);
+        
+        CGFloat calculatedTextHeight = [CFRWodTableViewCell heightOfContent:attributedString];
+        [[theValue(calculatedTextHeight) should] equal:theValue(htmlStringHeightOnScreenAsAttributedText)];
+    });
+		
+    pending(@"accurately calculates content height when the html INCLUDES youtube link", ^{
+        
+        NSString *youTubeHtml = @"<p><strong><em><span style=\"text-decoration: underline;\"><object width=\"425\" height=\"350\" data=\"http://www.youtube.com/v/4e47lyAbj6I\" type=\"application/x-shockwave-flash\"><param name=\"src\" value=\"http://www.youtube.com/v/4e47lyAbj6I\" /></object></span></em></strong></p>";
+        NSString *htmlStringWithImage = [htmlString stringByAppendingString:youTubeHtml];
+		NSAttributedString *attributedString = convertHtmlToAttributedString(htmlStringWithImage);
+        
+        CGFloat calculatedTextHeight = [CFRWodTableViewCell heightOfContent:attributedString];
+        [[theValue(calculatedTextHeight) should] equal:theValue(htmlStringHeightOnScreenAsAttributedText)];
+        
+    });
+    
 });
 	
 SPEC_END
