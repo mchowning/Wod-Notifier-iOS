@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    Unknown,
+typedef enum WodSource : NSInteger {
+        Unknown,
     CrossfitReviverWebsite,
     UserInput
 } WodSource;

@@ -64,6 +64,7 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
     [super viewDidLoad];
     
     self.helper = [[CFRCustomBusinessObject alloc] init];
+    
     [self getNewFetchedResultsController];
     
     
