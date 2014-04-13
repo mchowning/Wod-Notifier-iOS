@@ -10,7 +10,7 @@
 
 @protocol CFRWodDownloaderDelegate;
 
-@interface CFRWodDownloader : NSObject <NSXMLParserDelegate>
+@interface CFRWodDownloader : NSObject
 
 - (instancetype)initWithDelegate:(id <CFRWodDownloaderDelegate>)delegate;
 //+ (instancetype)downloaderWithDelegate:(id <CFRWodDownloaderDelegate>)delegate;

@@ -36,6 +36,7 @@
 		9D2FE0AC08AC481FBE2A40E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62DC7D28C2B482084C542A8 /* libPods.a */; };
 		D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */; };
 		FB5C33598C1C8BC774CF6853 /* CFRMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C396DEA5BF5322B2D2792 /* CFRMainTableViewDelegate.m */; };
+		FB5C36B773996C3A8D379311 /* CFRXmlParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C38043048A6079075E3D8 /* CFRXmlParserDelegate.m */; };
 		FB5C3C5514922D3F70BD17F3 /* CFRMainTableViewFetchedResultsControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C3D1056B73E49A561C881 /* CFRMainTableViewFetchedResultsControllerDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +95,9 @@
 		5D422CFF901442159CE8843D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D62DC7D28C2B482084C542A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5C323E5E3FADEF1DECE7C6 /* CFRMainTableViewFetchedResultsControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRMainTableViewFetchedResultsControllerDelegate.h; sourceTree = "<group>"; };
+		FB5C38043048A6079075E3D8 /* CFRXmlParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRXmlParserDelegate.m; sourceTree = "<group>"; };
 		FB5C396DEA5BF5322B2D2792 /* CFRMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRMainTableViewDelegate.m; sourceTree = "<group>"; };
+		FB5C3CE6D13F21C482F33E3E /* CFRXmlParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRXmlParserDelegate.h; sourceTree = "<group>"; };
 		FB5C3D1056B73E49A561C881 /* CFRMainTableViewFetchedResultsControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRMainTableViewFetchedResultsControllerDelegate.m; sourceTree = "<group>"; };
 		FB5C3F8D8327604E9A7AF23A /* CFRMainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRMainTableViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +239,8 @@
 				243E6F3618DB6F080056E930 /* CFRUpdater.m */,
 				243E6F3818DB702C0056E930 /* CFRWodDownloader.h */,
 				243E6F3918DB702C0056E930 /* CFRWodDownloader.m */,
+				FB5C38043048A6079075E3D8 /* CFRXmlParserDelegate.m */,
+				FB5C3CE6D13F21C482F33E3E /* CFRXmlParserDelegate.h */,
 			);
 			name = Update;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */,
 				FB5C33598C1C8BC774CF6853 /* CFRMainTableViewDelegate.m in Sources */,
 				FB5C3C5514922D3F70BD17F3 /* CFRMainTableViewFetchedResultsControllerDelegate.m in Sources */,
+				FB5C36B773996C3A8D379311 /* CFRXmlParserDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
