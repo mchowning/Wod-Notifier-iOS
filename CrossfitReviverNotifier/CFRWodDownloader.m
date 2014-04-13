@@ -23,7 +23,7 @@ typedef enum {
 @property (nonatomic) RSSTag tagCurrentlyWithin;
 @property (nonatomic, strong) CFRReviverWod *currentWod;
 @property (nonatomic, strong) NSMutableArray *downloadedWods; // of CFRReviverWod
-@property (nonatomic, strong) CFRUpdater *updaterForCallback;
+@property (nonatomic, strong) id <CFRWodDownloaderDelegate> delegate;
 
 @end
 
@@ -31,9 +31,7 @@ typedef enum {
 
 static NSString * const kUrlString = @"http://www.crossfitreviver.com/index.php?format=feed&type=rss";
 
-- (void)downloadWods:(CFRUpdater *)updater {
-    
-    self.updaterForCallback = updater;
+- (void)downloadWods {
     
     NSURL *url = [NSURL URLWithString:kUrlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -59,8 +57,31 @@ static NSString * const kUrlString = @"http://www.crossfitreviver.com/index.php?
     [operation start];
 }
 
-// Use this method to get older wods:
+// To get older wods, the following method may be useful:
 // [NSURL URLWithString:<#(NSString *)#> relativeToURL:<#(NSURL *)#>]
+
+#pragma mark - Lifecycle methods
+
+//- (id)init {
+//    self = [super init];
+//    if (self) {
+//        self.downloadedWods = [[NSMutableArray alloc] init];
+//    }
+//    return self;
+//}
+
+- (instancetype)initWithDelegate:(id <CFRWodDownloaderDelegate>)delegate {
+    self = [super init];
+    if (self) {
+        self.delegate = delegate;
+        self.downloadedWods = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+//+ (instancetype)downloaderWithDelegate:(id <CFRWodDownloaderDelegate>)delegate {
+//    return [[self alloc] initWithDelegate:delegate];
+//}
 
 #pragma mark - NSXMLParserDelegate methods
 
@@ -117,17 +138,7 @@ static NSString * const kUrlString = @"http://www.crossfitreviver.com/index.php?
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-    [self.updaterForCallback wodsDownloaded:self.downloadedWods];
-}
-
-#pragma mark - Lifecycle methods
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        self.downloadedWods = [[NSMutableArray alloc] init];
-    }
-    return self;
+    [self.delegate wodsDownloaded:self.downloadedWods];
 }
 
 @end

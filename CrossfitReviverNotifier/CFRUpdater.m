@@ -13,11 +13,9 @@
 
 @implementation CFRUpdater
 
-
 - (void)update {
-    CFRWodDownloader *wodDownloader = [[CFRWodDownloader alloc] init];
-    [wodDownloader downloadWods:self];
-    // TODO Make this fit the delegate pattern more closely???
+    CFRWodDownloader *wodDownloader = [[CFRWodDownloader alloc] initWithDelegate:self];
+    [wodDownloader downloadWods];
 }
 
 - (void)wodsDownloaded:(NSArray *)downloadedWods {
@@ -37,7 +35,7 @@
 		    newWodsDownloaded = YES;
 	    }
     }
-    
+
     if (newWodsDownloaded) {
 	    [coreDataHelper saveEntities];
     }

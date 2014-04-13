@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CFRUpdater.h"
+
+@protocol CFRWodDownloaderDelegate;
 
 @interface CFRWodDownloader : NSObject <NSXMLParserDelegate>
 
-extern NSString * const kUpdateNotificationString;
+- (instancetype)initWithDelegate:(id <CFRWodDownloaderDelegate>)delegate;
+//+ (instancetype)downloaderWithDelegate:(id <CFRWodDownloaderDelegate>)delegate;
+- (void)downloadWods;
 
-- (void)downloadWods:(CFRUpdater *)updater;
+@end
+
+@protocol CFRWodDownloaderDelegate <NSObject>
+
+- (void)wodsDownloaded:(NSArray *)downloadedWods;
 
 @end
 

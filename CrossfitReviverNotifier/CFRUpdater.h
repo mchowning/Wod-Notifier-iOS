@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CFRWodDownloader.h"
 
-@interface CFRUpdater : NSObject
+@interface CFRUpdater : NSObject <CFRWodDownloaderDelegate>
 
 - (void)update;
-- (void)wodsDownloaded:(NSArray *)downloadedWods;
+//- (void)wodsDownloaded:(NSArray *)downloadedWods;
 
 @end

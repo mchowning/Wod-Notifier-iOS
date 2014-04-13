@@ -7,7 +7,7 @@
 //
 
 #import "CFRMainTableViewController.h"
-#import "CFRWodDownloader.h"
+#import "CFRUpdater.h"
 #import "CFRCustomBusinessObject.h"
 #import "CFRMainTableViewDelegate.h"
 #import "CFRMainTableViewFetchedResultsControllerDelegate.h"
