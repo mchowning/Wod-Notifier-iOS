@@ -35,6 +35,7 @@
 		24FBF77718DC7EF700376423 /* CFRWodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24FBF77518DC7EF700376423 /* CFRWodTableViewCell.xib */; };
 		9D2FE0AC08AC481FBE2A40E9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D62DC7D28C2B482084C542A8 /* libPods.a */; };
 		D79A3546F60C4C49855CF74D /* libPods-CrossfitReviverNotifierTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802D9D976046F3BEA9C577 /* libPods-CrossfitReviverNotifierTests.a */; };
+		FB5C33598C1C8BC774CF6853 /* CFRMainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C396DEA5BF5322B2D2792 /* CFRMainTableViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		3B8B7040465C4B77A89F7DCB /* Pods-CrossfitReviverNotifierTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossfitReviverNotifierTests.xcconfig"; path = "Pods/Pods-CrossfitReviverNotifierTests.xcconfig"; sourceTree = "<group>"; };
 		5D422CFF901442159CE8843D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D62DC7D28C2B482084C542A8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5C396DEA5BF5322B2D2792 /* CFRMainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFRMainTableViewDelegate.m; sourceTree = "<group>"; };
+		FB5C3F8D8327604E9A7AF23A /* CFRMainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRMainTableViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,8 @@
 				24FBF76C18DBE1C900376423 /* CFRMainTableViewController.h */,
 				24FBF76D18DBE1C900376423 /* CFRMainTableViewController.m */,
 				24FBF77118DC54C800376423 /* Update */,
+				FB5C396DEA5BF5322B2D2792 /* CFRMainTableViewDelegate.m */,
+				FB5C3F8D8327604E9A7AF23A /* CFRMainTableViewDelegate.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				2485674C18DB5CD3006FFE27 /* main.m in Sources */,
 				243E6F3A18DB702C0056E930 /* CFRWodDownloader.m in Sources */,
 				243E6F3718DB6F080056E930 /* CFRUpdater.m in Sources */,
+				FB5C33598C1C8BC774CF6853 /* CFRMainTableViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
