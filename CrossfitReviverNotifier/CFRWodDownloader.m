@@ -10,11 +10,11 @@
 #import "AFNetworking.h"
 #import "Models/CFRReviverWod.h"
 
-typedef enum RSSTag {
-    UNKNOWN,
-    TITLE,
-    LINK,
-    DESCRIPTION
+typedef enum {
+    RSSTagUnknown,
+    RSSTagTitle,
+    RSSTagLink,
+    RSSTagDescription
 } RSSTag;
 
 @interface CFRWodDownloader()
@@ -29,17 +29,13 @@ typedef enum RSSTag {
 
 @implementation CFRWodDownloader
 
-NSString * const UPDATE_NOTIFICATION_KEY = @"update_notification_key";
-static NSString * const URL_STRING =
-        @"http://www.crossfitreviver.com/index.php?format=feed&type=rss";
-
-
+static NSString * const kUrlString = @"http://www.crossfitreviver.com/index.php?format=feed&type=rss";
 
 - (void)downloadWods:(CFRUpdater *)updater {
     
     self.updaterForCallback = updater;
     
-    NSURL *url = [NSURL URLWithString:URL_STRING];
+    NSURL *url = [NSURL URLWithString:kUrlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -68,6 +64,8 @@ static NSString * const URL_STRING =
 
 #pragma mark - NSXMLParserDelegate methods
 
+// TODO Refactor XMLParser into separate class
+
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
     // Avoids picking up the "title" and "link" tags that precede the first Wod entry
@@ -77,28 +75,28 @@ static NSString * const URL_STRING =
     
     if (self.inItem) {
         if ([elementName isEqualToString:@"title"]) {
-            self.tagCurrentlyWithin = TITLE;
+            self.tagCurrentlyWithin = RSSTagTitle;
             assert(self.currentWod == nil);
             self.currentWod = [[CFRReviverWod alloc] init];
         } else if ([elementName isEqualToString:@"link"]) {
-            self.tagCurrentlyWithin = LINK;
+            self.tagCurrentlyWithin = RSSTagLink;
         } else if ([elementName isEqualToString:@"description"]) {
-            self.tagCurrentlyWithin = DESCRIPTION;
+            self.tagCurrentlyWithin = RSSTagDescription;
         }
     }
 }
 
-- (void)    parser:(NSXMLParser *)parser
+- (void) parser:(NSXMLParser *)parser
    foundCharacters:(NSString *)string
 {
     switch (self.tagCurrentlyWithin) {
-        case TITLE:
+        case RSSTagTitle:
             self.currentWod.title = string;
             break;
-        case LINK:
+        case RSSTagLink:
             self.currentWod.link = string;
             break;
-        case DESCRIPTION:
+        case RSSTagDescription:
             self.currentWod.htmlDescription = string;
             break;
         default:
@@ -106,16 +104,16 @@ static NSString * const URL_STRING =
     }
 }
 
-- (void)    parser:(NSXMLParser *)parser
+- (void) parser:(NSXMLParser *)parser
      didEndElement:(NSString *)elementName
       namespaceURI:(NSString *)namespaceURI
      qualifiedName:(NSString *)qName
 {
-    if (self.tagCurrentlyWithin == DESCRIPTION) {
+    if (self.tagCurrentlyWithin == RSSTagDescription) {
         [self.downloadedWods addObject:self.currentWod];
         self.currentWod = nil;
     }
-    self.tagCurrentlyWithin = UNKNOWN;
+    self.tagCurrentlyWithin = RSSTagUnknown;
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {

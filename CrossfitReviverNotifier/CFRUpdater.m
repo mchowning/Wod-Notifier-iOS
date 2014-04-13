@@ -17,6 +17,7 @@
 - (void)update {
     CFRWodDownloader *wodDownloader = [[CFRWodDownloader alloc] init];
     [wodDownloader downloadWods:self];
+    // TODO Make this fit the delegate pattern more closely???
 }
 
 - (void)wodsDownloaded:(NSArray *)downloadedWods {

@@ -11,7 +11,7 @@
 
 @interface CFRWodDownloader : NSObject <NSXMLParserDelegate>
 
-extern NSString * const UPDATE_NOTIFICATION_KEY;
+extern NSString * const kUpdateNotificationString;
 
 - (void)downloadWods:(CFRUpdater *)updater;
 

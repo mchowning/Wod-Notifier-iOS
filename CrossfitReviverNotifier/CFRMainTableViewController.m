@@ -10,20 +10,18 @@
 #import "CFRWodDownloader.h"
 #import "CFRCustomBusinessObject.h"
 #import "CFRMainTableViewDelegate.h"
+#import "CFRMainTableViewFetchedResultsControllerDelegate.h"
 
 @interface CFRMainTableViewController ()
-
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) CFRCustomBusinessObject *helper;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) CFRMainTableViewFetchedResultsControllerDelegate *fetchedResultsControllerDelegate;
 @property (nonatomic, strong) CFRMainTableViewDelegate *tableViewDelegate;
-
 @end
 
 @implementation CFRMainTableViewController
 
 static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
-
-#pragma mark - Lifecycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,78 +32,36 @@ static NSString * const FETCHED_RESULTS_CACHE = @"main_table_cache";
 
     self.tableViewDelegate = [[CFRMainTableViewDelegate alloc] initWithFetchedResultsController:self.fetchedResultsController
                                                                                       tableView:self.tableView];
-    self.tableView.delegate = self.tableViewDelegate;
-    self.tableView.dataSource = self.tableViewDelegate;
+    [self.tableView setDelegate:self.tableViewDelegate];
+    [self.tableView setDataSource:self.tableViewDelegate];
     
     [self.tableView setHidden:YES]; // Avoids empty tableView showing on first load before
                                     // entries are downloaded.
-    NSError *error;
-    if (![self.fetchedResultsController performFetch:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-        //exit(-1); // Fail
-    }
-    
-    [[[CFRUpdater alloc] init] update];
+    [self checkForUpdates];
 }
-
-#pragma mark - Getter and Setter methods
 
 - (NSFetchedResultsController *)getNewFetchedResultsController {
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
     self.fetchedResultsController =
             [self.helper getFetchedResultsControllerWithSortDescriptors:@[sortDescriptor]
                                                               cacheName:FETCHED_RESULTS_CACHE];
-    self.fetchedResultsController.delegate = self;
+    self.fetchedResultsControllerDelegate =
+            [[CFRMainTableViewFetchedResultsControllerDelegate alloc] initWithTableView:self.tableView];
+    [self.fetchedResultsController setDelegate:self.fetchedResultsControllerDelegate];
+    [self fetchResults];
     return self.fetchedResultsController;
 }
 
-#pragma mark - NSFetchedResultsControllerDelegate methods
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    NSLog(@"delegate notified that content will change");
-    
-    [self.tableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller
-   didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath *)indexPath
-     forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath
-{
-    NSLog(@"delegate notified that object changed");
-    
-    UITableView *tableView = self.tableView;
-    
-    switch(type) {
-            
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [tableView reloadRowsAtIndexPaths:@[indexPath]
-                             withRowAnimation:UITableViewRowAnimationAutomatic];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath]
-                             withRowAnimation:UITableViewRowAnimationFade];
-            break;
+- (void)fetchResults {
+    NSError *error;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        //exit(-1); // Fail
     }
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    NSLog(@"delegate notified that content changed");
-    [self.tableView endUpdates];
+- (void)checkForUpdates {
+    [[[CFRUpdater alloc] init] update];
 }
 
 @end
