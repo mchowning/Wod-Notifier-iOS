@@ -23,8 +23,6 @@
     BOOL newWodsDownloaded = NO;
     CFRCustomBusinessObject *coreDataHelper = [[CFRCustomBusinessObject alloc] init];
     for (id<CFRWod> aWod in downloadedWods) {
-//	    NSString *newWodUniqueID = aWod.uniqueID;
-//	    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"uniqueID = %@", newWodUniqueID];
 	    if (![coreDataHelper wodAlreadyExists:aWod ]) {
 		    [coreDataHelper createWodEntityWithTitle:aWod.title
 		                                        date:aWod.date
